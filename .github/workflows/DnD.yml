@@ -1,42 +1,1554 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		
+			body { background-image: url(Stradh.png);background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; font-family: Open sans; font-size: 18px;}		
+			
+			.portada { margin: auto;width: 900px; height: 1350px; background-image: url(portada.jpg);background-repeat: no-repeat; background-size: 100%; display: table;}	
+			
+			.portadaimagen { display: block;margin-left: auto; margin-right: auto;}
+			
+			.hojavertical { margin: auto;width: 900px; height: 1240px; background-image: url(pergamino.png);background-repeat: no-repeat; background-size: 100%;display:table; margin-bottom: 75px;}
+			
+			.hojahorizontal { margin: auto;width: 1450px;height: 750px; background-image: url(pergamino_horizontal.png); display: table;margin-bottom: 75px;}
+			
+			.hojahorizontal2 { margin: auto;width: 1450px;height: 1050px; background-image: url(pergamino_horizontal.png); display: table;margin-bottom: 75px;}
+			
+			#header { margin-left: 50px;margin-top: 20px;font-weight: bold;font-size: 40px;color: white; text-shadow: 3px 3px 5px black;height: 50px;}
+			
+			#contenido { margin-left: 30px;margin-right: 30px;height:1100px;}
+			
+			#contenido2 { margin-left: 30px;margin-right: 30px;height:1150px;}
+			
+			#contenido3 { margin-left: 30px;margin-right: 30px;height:1300px;}
+			
+			#contenido4 { margin-left: 30px;margin-right: 30px;height:1400px;}
+			
+			#footer { position: inherit;height: 50px;text-align: center;font-weight: bold;}
+			
+			#tablahorizontal { width: 80%; margin: auto; height: 700px;margin-bottom: 20px;}
+			
+			#tablahorizontal2 { width: 80%; margin: auto; height: 1000px;margin-bottom: 20px;}
+			
+			.tabla_hojahorizontal { width: 100%; margin-left: auto;margin-right: auto; height: 100%;border-collapse:collapse; border: 3px solid #8F222E;}
+			
+			.tabla_hojahorizontal_filapar {background-color: #E0E5C1}
+			
+			.tabla_hojahorizontal_filaimpar {background-color: #C9AD6A}
+			
+			.tabla_hojahorizontal_definidor {background-color: #FEF376}
+			
+			.tabla_hojahorizontal_datos {background-color: #7E3D0B}
+			
+			#tablahorizontal td { vertical-align: middle; text-align: center;}
+			
+			#tablahorizontal2 td { vertical-align: middle; text-align: center;}		
+			
+			#weapon_traits th{ border: 3px solid #44451B; padding: 5px;}
+			
+			h1 { text-align:center;color: #58180D; text-decoration: underline; text-shadow: 1px 1px 2px black}
+			
+			h2 { color: #;text-decoration: underline; text-shadow: 1px 1px 2px black}
+			
+			h3 { font-size: 24px; text-align:center;}
+			
+			ol { margin-left: 40px;font-weight: bold;}
+			
+			li { line-height: 1.6}
+			
+			.tablacentral { margin-left: auto;margin-right: auto;border-collapse: collapse; border: 3px solid #8F222E;}
+			
+			.td1 { text-align: center; border: 2px solid #8F222E; background-color: #C9AD6A;}
+			
+			.td2 { border: 2px solid #8F222E; background-color: #E8DFC0; padding-left: 15px; padding-right: 15px;}
+			
+			.Injurytable {font-size: 12px;border-collapse: collapse; border: 3px solid #8F222E;}
+			
+			#injuryth {width: 50px; text-align: center; border: 2px solid #8F222E;}
+			
+			.injuryth2 { text-align: left; border: 2px solid #8F222E; padding-top: 5px; padding-bottom: 5px;}
+			
+			.Injurytable tr:hover td {background-color: #EBCEC3; font-size: 16px;padding-top: 10px; padding-bottom: 10px;padding-left:5px;padding-right:5px; text-align: left;}
+			
+			.systemShocktable {font-size: 14px;margin-left: 100px;margin-right: 100px;border-collapse: separate;border-spacing: 20px 20px;}
+			
+			.systemshockth {width: 40px; text-align: center;}
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+			.centro { display: block;text-align: center;}
+			
+		</style>
+		<title>RolDnD</title>
+		<meta name="generator" content="Bluefish 2.2.1" >
+		<meta name="author" content="USUARIO" >
+		<meta name="date" content="2021-10-22T18:50:45+0100" >
+		<meta name="copyright" content="">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+		<meta http-equiv="content-style-type" content="text/css">
+		<meta http-equiv="expires" content="0">
+		<script>
+		function activarBackground()
+{
+  document. getElementsByTagName('portadaimagen').style.visibility='hidden';
+}
+		function desactivarBackground()
+{
+  document. getElementsByTagName('portadaimagen').style.visibility='visible';
+}
+	
+		</script>
+		</head>
+		<body>
+		<div class="portada">
+			<br>
+			<br>
+			<br>
+			<h1>Portada</h1> 
+			<br>
+			<img src="imagenportada.jfif" class="portadaimagen" onmouseover="activarBackground()" onmouseout="desactivarBackground()">
+	
+		</div>
+		<div class="hojavertical">
+		
+			<br>
+			<h1>Indice</h1>
+			<br>
+			<br>
+			<br>
+			<table style="width: 50%;margin: auto;font-weight: bold;border-collapse: collapse;">
+			<tr><th colspan="2"></th></tr>
+			<tr><td style="width: 80%; border-bottom: 2px solid black"><a href="#Rules" style="text-decoration: none;color: black;">Rules</a><td style=" width: 5%;border-bottom: 2px solid black">1</td></tr>
+			<tr><td style="width: 80%; border-bottom: 2px solid black; padding-top: 10px"><a href="#Changed_Feats" style="text-decoration: none;color: black;">Multiple Changes</a><td style=" width: 5%;border-bottom: 2px solid black; padding-top: 10px">3</td></tr>
+			<tr><td style="width: 80%; border-bottom: 2px solid black; padding-top: 10px"><a href="#Equipment" style="text-decoration: none;color: black;">Equipment</a><td style=" width: 5%;border-bottom: 2px solid black; padding-top: 10px">5</td></tr>
+			<tr><td style="width: 80%; border-bottom: 2px solid black; padding-top: 10px"><a href="#Firearms" style="text-decoration: none;color: black;">Firearms</a><td style=" width: 5%;border-bottom: 2px solid black; padding-top: 10px">11</td></tr>
+			<tr><td style="width: 80%; border-bottom: 2px solid black; padding-top: 10px"><a href="#Armor" style="text-decoration: none;color: black;">Armor</a><td style=" width: 5%;border-bottom: 2px solid black; padding-top: 10px">12</td></tr>
+			<tr><td style="width: 80%; border-bottom: 2px solid black; padding-top: 10px"><a href="#Alchemist" style="text-decoration: none;color: black;">Alchemist</a><td style=" width: 5%;border-bottom: 2px solid black; padding-top: 10px">14</td></tr>
+			<tr><td style="width: 80%; border-bottom: 2px solid black; padding-top: 10px"><a href="#Injuries" style="text-decoration: none;color: black;">Injuries</a><td style=" width: 5%;border-bottom: 2px solid black; padding-top: 10px">22</td></tr>
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
 
-# Allow one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
+			
+			</table>
+		</div>
+		<div class="hojavertical">
+		
+			<div id="header"><a id="Rules">Rules</a></div>
+			<br>
+			<div id="contenido">
+				<p>
+					<h2>INGENIOUS PROFICIENCY</h2>
+					When creating a character, you gain a number of points equal to your <b>Intelligence modifier</b> (minimum of 0).
+					<br>
+					<br>
+					When you permanently increase your <b>Intelligence modifier,</b> you may spend additional points as normal. Proficiencies learned by spending points <b>cannot be lost once gained.</b>
+					<br>
+					<br>
+					<table class="tablacentral">
+						<tr><th class="td1">Benefit</th><th class="td1">Cost</th></tr>
+						<tr><td class="td2">Additional Class or Background Skill proficiency</td><td class="td1">2</td></tr>
+						<tr><td class="td2">Double proficiency for a Skill you are proficient in</td><td class="td1">3</td></tr>
+						<tr><td class="td2">Learn an additional language</td><td class="td1">1</td></tr>
+						<tr><td class="td2">Tool proficiency</td><td class="td1">1</td></tr>
+						<tr><td class="td2">Double proficiency for a Tool you are proficient with</td><td class="td1">2</td></tr>
+						<tr><td class="td2">Proficiency with 3 Simple or 2 Martial weapons</td><td class="td1">1</td></tr>
+					</table>
+					<br>
+					<br>
+					<h2>IMPROVED INSPIRATION</h2>
+					<b>Both the players and the DM</b> start each session with 1 inspiration point. This inspiration can be used <b>to reroll any die roll</b> made by anyone, but another player can choose to refuse the inspiration in which case the inspiration is not lost.
+					<br>
+					<br>
+					<br>
+					<h2>IMPROVED HEALING POTION</h2>
+					When you drink a healing potion, don't roll a d4 ,instead <b>roll the same die as your largest hit die and spend these hit dies</b>. If you don't have a hit die value for any reason, roll a d4. 
+					<br>
+					<br>
+					<b><u>Potion of Healing :</u> 2d(hitdice) + 2 ; <u>Potion of Greater Healing :</u> 4d(hitdice) + 4 ; etc...</b>
+					<br>
+					<br>
+					<br>
+					<h2>ADDITIONAL ATTACKS</h2>
+					When you get a feature that <b>adds a single attack</b> as a <b>bonus action</b> instead <b>you add it to your attack action</b>. For example Two weapon fighting would now count as an extra attack. This effect can happen <b>once per turn</b>, after this first time you will need to use your bonus action normally.
+					<br>
+					<br>
+					<br>
+					<h2>OPPORTUNITY ATTACKS</h2>
+				   Instead of provoking opportunity attacks when leaving range, creatures provoke them <b>when they move within your range</b>. This doesnt apply when entering someones range.
+				<br>
+				</p>
+			</div>
+			<div id="footer">Página 1</div>
+			
+		</div>
+		<div class="hojavertical">
+		
+		 
+			<div id="contenido3">
+				<p>
+				<br>
+				<br>
+				<h2>SURGICAL HEALING <mark>(optional)</mark></h2>
+				Including additional healing kits so parties without a healer can do better.
+				<br>
+				<br>
+				<b>Healer's kit</b> - As an action, you can expend one use of the kit to stabilize a creature that has 0 hit points, without needing to make a Wisdom (Medicine) check. <b>Cost (5gp) Weight: 3 lbs</b>
+				<br>
+				<br>
+				<b>Medical Kit</b> - Heals an additional 1d10 hp. <b>Cost (50gp) Weight: 5 lbs</b>
+				<br>
+				<br>
+				<b>Surgeon kit</b> - It heals an additional 15 hp. Additionally you can do a medicine check (DC20) to a creature that has died in the last minute to bring him back to life. This action consumes 5 charges. <b>Cost (250gp) Weight: 8 lbs</b>
+				<br>
+				<br>
+				<h2>FALL UNCONSCIOUS</h2>
+				When you <b>fall unconscius you gain 1 point of exhaustion.</b> Additionally you <b>can use 1 hit die to recover 1 point of exhaustion.</b>
+				<br>
+				<br>
+				<h2>REVISED FLANKING</h2>
+				You may flank any creature but <b>you only gain advantage on the first attack</b> on each of your turns.				
+				<br>
+				<br>
+				
+				<h2>TAKE AIM</h2>
+				If a creature <b>didnt move last turn</b> it can choose to <b>gain advantage on the first ranged attack</b> it makes this turn and reduce its speed to 0 for the rest of it.				
+				<br>
+				<br>
+				<h2>MAGIC ITEM PRICES</h2>
+				This is the website that the master uses to revamp prices on magic items: 
+				 <a href="https://forums.giantitp.com/showthread.php?424243-Sane-Magic-Item-Prices">HERE</a>
+				<br>
+				<br>
+				</p>
+			</div>
+					
+			<div id="footer">Página 2</div>
+			
+			</div>
+		
+		
+		<div class="hojavertical">
+		
+			<div id="header"><a id="Changed_Feats">Multiple Changes</a></div>
 
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+			<div id="contenido2">
+				<h1 style="background-color: #AE3133">NEW FEATS</h1>
+				<p>
+				<h2>LIGHT WEAPON MASTER</h2>
+				- While holding a light melee weapon that you are proficient with in each hand, before you make and attack with one of the weapons, <b>you can choose to take a -5 penalty to the attack roll.</b> If the attack hits, <b>you add the base weapon damage dice</b> of the <b>off-hand weapon</b> together with the damage of the main attack for the attack's damage and <b>your ability modifier is doubled (if it applies)</b>, as you strike with both weapons simultaneously.
+				<br>
+				<br>
+				- Whenever you make an attack, <b>you can draw a light melee weapons as part of taking the attack.</b>
+				<br>
+				<br>
+				- On your turn, when <b>you score a critical hit with a melee weapon</b> or <b>reduce a creature to 0 hit points</b> with one, your <b>movement speed</b> is increased by <b>15 feet</b> until the end of your turn.
+				<br>
+				<h2>FRONTLINE CHARGER</h2>
+				Your fighting prowess allows you to become the vanguard of any army. You gain the following benefits: 
+				<br>
+				<br>
+				- Increase your <b>Strength, Dexterity or Constitution by 1</b>, to a maximum of 20.
+				<br>
+				<br>
+				- You can use <b>your Dash as a bonus action</b> when you move toward a hostile creature.  If you have moved at least 20 ft. with this dash, you can <b>add your ability modifier twice to the next damage roll</b> you make with a melee weapon and you can also <b>shove the first creature</b> you hit with <b>advantage.</b>
+				<br>
+				<br>
+				- If flanked by any creature, you can use <b>your reaction to negate any flanking bonuses against you</b> until the end of your next turn. This ability can be used a number of times equal to <b>your proficiency modifier</b> and recharges after a long rest.
+				<br>
+				<h2>COMBAT BLADE MASTER</h2>
+				- Every combat blade <b>gains the parry property</b> for you. If that combat blade already had parry, <b>the amount of AC</b> it gives to the triggering attack <b>increases by 1.</b>
+				<br>
+				<br>
+				- If you <b>successfully parry</b> an attack using a combat blade <b>your AC increases by 1 until the start of your next turn</b>. If your weapon has the <b>riposte property</b>, you may use riposte <b>if an attack misses because of this additional AC</b> and you are in the following stance.
+				<br>
+				<br>
+				- While holding a combat blade you may <b>use your bonus action to enter a readied stance</b>. While in this stance you gain <b>an additional reaction</b> that you may <b>only use for melee attacks</b> with combat blades.
+				<br>
+				<br>			
+				♦ The following weapons count as Combat Blades for this feat: <span style="color:#960F77">Dao, Broadsword, Falchion, Katana, Longsword,O-Katana, Rapier, Scimitar, Shortsword, Swordbreaker Dagger.</span>
+				<br>					
+				</p>
+			</div>
+			<br>
+			<br>
+			<div id="footer">Página 3</div>
+			
+		</div>
+		
+		<div class="hojavertical">
+			<div id="header"></div>
+		
+			<div id="contenido2">
+				<p>
+				<h2>HEAVY BLADE MASTER</h2>
+				- Increase your <b>Strength or Constitution by 1</b>, to a maximum of 20.
+				<br>
+				<br>
+				- You may shove a creature using a heavy blade. <b>This shove</b> if successful deals <b>half the damage die of the weapon (rounded up) plus your STR mod.</b> You count as one size category larger for this shove.
+				<br>
+				<br>
+				- On your turn, when <b>you score a critical hit</b> with a heavy blade or <b>reduce a creature to 0 hit points</b> with one, you may apply the <b>brutal trait without needing a crit on the next attack</b> you make before the start of your next turn. 
+				<br>
+				<br>
+				♦ The following weapons count as Heavy Blades for this feat: <span style="color:#960F77">Bastard Sword, Full Blade, GreatSword, O-Katana, Zweihänder.</span>
+				<br>			
+				<h2>AXE MASTER</h2>
+				- Increase your <b>Strength or Constitution by 1</b>, to a maximum of 20.
+				<br>
+				<br>
+				- When you <b>roll a 1 or 2 on a damage die</b> for an attack you make with an axe, you can <b>reroll the die</b> and must use the new roll, even if the new roll is a 1 or a 2.
+				<br>
+				<br>
+				- When <b>you score a critical hit</b> while using an axe, the target has its <b>AC reduced by 1</b> for the next minute.
+				<br>
+				<br>
+				♦ The following weapons count as Axes for this feat: <span style="color:#960F77">Handaxe, Bastard Axe (Bastard Sword variant), Battleaxe, Full Axe (Full blade variant), Greataxe.</span>
+				<br>				
+				<h2>BLUDGEON MASTER</h2>	
+				- <b>+1 to attacks and damage</b> against enemies wearing <b>medium armor, heavy armor or any shield</b> that's not a buckler.
+				<br>
+				<br>
+				- Whenever you <b>have disadvantage on attacks</b> and at least <b>one roll would have hit</b> but the other misses, you can deal your <b>strength modifier in weapon damage</b> to the target. This still counts as a miss.
+				<br>
+				<br>
+				- <b>Once per turn,</b> when you hit a creature with a bludgeon, <b>you may try to shove a creature 5ft</b> away from you <b>as part of the attack.</b>
+				<br>
+				<br>
+				♦ The following weapons count as Bludgeons for this feat: <span style="color:#960F77">Light Hammer, Mace, Bastard Hammer (Bastard Sword variant), Full Maul (Full Blade variant), Maul, Morningstar, Warhammer.</span>
+				<br>
+				<h2>SPEAR MASTER</h2>				
+				- Increase your <b>Strength, Dexterity or Constitution by 1</b>, to a maximum of 20.
+				<br>
+				<br>
+				- <b>You ignore the penalty of the charge property.</b>
+				<br>
+				<br>
+				- When you <b>first attack a creature entering your range</b> (be because of polearm master or because you prepared your action), this attack is made with <b>advantage and applies the damage boost of charge.</b>
+				<br>
+				<br>					
+				♦ The following weapons count as Spears for this feat: <span style="color:#960F77">Javelin, Spear,Lance, Long Spear, Pike, Trident.</span>
+				<br>
+				</p>
+			</div>
+			<div id="footer">Página 4</div>
+		</div>
+		
+		<div class="hojavertical">
+			<div id="header"></div>
+			<div id="contenido2">
+				<p>
+				<h2>FLAIL AND WHIP MASTER</h2>
+				- Increase your <b>Strength or Dexterity DC by 1.</b>
+				<br>
+				<br>
+				- When you hit a <b>large or smaller creature with an opportunity attack,</b> that creature must make a <b>Strength saving throw against your Strength or Dexterity DC</b> (depending on your weapon) or <b>fall Prone.</b>
+				<br>
+				<br>
+				- On the <b>first attack you make each turn,</b> you may apply the <b>shield-wrap bonus</b> to an attack made against a <b>creature without a shield.</b>
+				<br>
+				<br>
+				♦ The following weapons count as Flails and Whips for this feat: <span style="color:#960F77">Flail, Heavy Flail, Kusarigama, Whip, Whip-Dagger.</span>
+				<br>
+				<h2>BOW AND SLING MASTER</h2>
+				- Increase your <b>Dexterity by 1</b>, to a maximum of 20.
+				<br>
+				<br>
+				- <b>Once per turn</b> when you make a <b>ranged attack,</b> you may choose make an <b>additional attack to an additional creature within 5ft</b> of the first objective. If you choose to attack this way, the attack targeting the <b>second creature</b> is made with <b>disadvantage.</b>
+				<br>
+				<br>
+				- <b>If you haven't moved this turn,</b> you may use <b>your reaction</b> to <b>reduce your speed to 0</b> and <b>gain advantage on the first attack</b> you make this turn.
+				<br>
+				<br>
+				♦ The following weapons count as Bows and Slings for this feat: <span style="color:#960F77">Shortbow, Sling, Slingshot, Greatbow, Longbow.</span>
+				<br>
+				<h2>FIREARM TRAINEE</h2>
+				- Your <b>Dexterity increases by 1.</b>
+				<br>
+				<br>
+				- <b>You gain proficiency with firearms.</b>
+				<br>
+				<br>
+				- Being within <b>5ft of a hostile creature does not impose disadvantage</b> on your ranged weapon attack rolls.
+				<br>
+				<h2>FIREARM MASTER</h2>
+				- <b>You ignore the loading property.</b>
+				<br>
+				<br>
+				- Weapons with the <b>spread property count as melee weapons</b> for the purposes of <b>disadvantage, flanking and opportunity attacks</b> when used within 5ft of a creature and weapons with the <b>caliber property roll 3d20 instead of 2d20</b> when having <b>advantage</b> on an attack roll.
+				<br>
+				<br>
+				- If you roll a <b>misfire on an attack</b> with a firearm, you can use <b>your reaction to roll a d20.</b> If the number rolled is <b>higher than the weapon’s misfire score,</b> the firearm does not misfire. You cannot use this feature of this feat again until you complete a <b>short or long rest.</b>
+				<br>
+				</p>
+			</div>
+			<div id="footer">Página 5</div>
+		</div>
+		
+		<div class="hojavertical">
+		
+			<div id="contenido2">
+				<p>
+				<h1 style="background-color: #AE3133">CHANGED FEATS</h1>
+				<h2>POLEARM MASTER</h2>
+				- Enemies provoke opportunity attacks <b>when entering your range</b>.
+				<br>
+				<br>
+				- When <b>using a polearm with two hands</b> you gain an additional attack which is a <b>d4 <img src="hammer.png"> damage</b>.
+				<br>
+				<br>
+				- You gain the ability to <b>use a polearm with 1 hand</b> having the <b>damage die reduced by a d2</b> (Example: glaive 1d10 when used two-handed and 1d8 when used one-handed).
+				<br>
+			   <br>
+				♦ The following weapons count as Polearms for this feat: <span style="color:#960F77">Javelin, Quarterstaff, Scythe, Spear, Glaive, Halberd, Long Spear, Naginata, Pike, Steel-capped Staff, Trident, War Scythe.</span>
+				<br>
+				<h2>MEDIUM ARMOR MASTER</h2>
+				<span style="color: red;">+</span> Prerequisites: Proficiency with medium armor
+				<br>
+				<br>
+				You have practiced moving in medium armor to gain the following benefits:
+				<br>
+				<br>
+				- Increase your <b>Dexterity score by 1</b>, to a maximum of 20
+				<br>
+				<br>
+				- When you wear <b>medium armor</b>, you gain an additional <b>+1 to AC</b>
+				<br>
+				<h2>SENTINEL</h2>
+				You have mastered techniques to take advantage of every drop in any enemy's guard, gaining the following benefits:
+				<br>
+				<br>
+				- When you hit a creature with an opportunity attack, <b>the creature's speed is reduced by half</b> for the rest of the turn.
+				<br>
+				<br>
+				- Creatures provoke opportunity attacks from you <b>even if they take the Disengage</b> action before leaving your reach.
+				<br>
+				<br>
+				- When <b>a creature within 5 feet of you makes an attack</b> against a target other than you (and that target doesn't have this feat), you can use <b>your reaction to make a melee weapon attack</b> against the attacking creature.
+				<h1 style="background-color: #AE3133">CHANGED FIGHTING STYLES</h1>
+				<h2>GREAT WEAPON FIGHTING</h2>
+				When you roll damage for an attack you make with a melee weapon that you are wielding with two hands, <b>you add 1d4</b> of the type of the weapon you are wielding to that <b>damage roll</b>. The weapon must have the <b>Two-Handed or Versatile</b> property for you to gain this benefit. This effect doesn't apply to the back end of a polearm.
+				<br>
+				<br>
+				</p>
+			</div>
+			<div id="footer">Página 6</div>
+			
+		</div>
+		
+		<div class="hojavertical">
+		
+			<div id="header"><a id="Equipment">Equipment</a></div>
+				<div id="contenido">
+				<p>
+				<h2>New Weapon Traits</h2>
+				<table id="weapon_traits"><tr><th style="background-color:#FF0000" >Charge</th></tr></table><td>
+				<br>
+				This weapon can be used to deal lethal damage on a charge. If you move at least 20 feet in a straight line before engaging an opponent, you may choose to take a -3 modifier on your first attack roll against that creature. If you hit with that attack, you roll an additional damage die, equal to that of the weapon's usual damage die.
+				<br>
+				<br>
+				<table id="weapon_traits"><tr><th style="background-color:#FF0000" >Parry</th></tr></table><td>
+				<br>
+				When you are wielding a weapon with the parry property and a creature you can see hits you with a melee attack, you can use your reaction to add 1 to your AC for that attack, potentially causing the attack to miss you. You must have a Dexterity score of 13 or higher to take advantage of this feature, which can be used in conjunction with the Defensive Duelist feat
+				<br>
+				<br>
+				<span style="color: #CC0000;"><b><u>Versatile</u></b></span>
+				<br>
+				<br>
+				A weapon with the parry (versatile) property may be used to parry normally with one hand (see above), or using two hands, in which case the wielder may add 2 to their AC.
+				<br>
+				<br>
+				<table id="weapon_traits"><tr><th style="background-color:#FF0000" >Riposte</th></tr></table><td>
+				<br>
+				The speed of this weapon allows you to turn defence into attack. Whenever using the parry property of your weapon causes an attack to miss you, as part of the same reaction you make make a retaliatory melee attack, using your Dexterity modifier for the attack and damage rolls.
+				<br>
+				<br>
+				<table id="weapon_traits"><tr><th style="background-color:#FF0000" >Savage</th></tr></table><td>
+				<br>
+				Savage weapons combine speed, weight and penetration, enabling them to deal decisive blows in combat. When you roll a 19 on an attack roll, roll an additional d6. If you roll the number given in parentheses next to the weapon, or higher, you score a critical hit. If the weapon has the versatile property reduce the number in the parentheses by 1, when it is wielded in two hands. If there is no number in parentheses, no need to roll a d6, a 19 is an automatic critical hit.
+				<br>
+				<br>
+				<table id="weapon_traits"><tr><th style="background-color:#FF0000" >Shield-wrap</th></tr></table><td>
+				<br>
+				You gain a +2 to attack rolls against opponents wielding a shield.
+				<br>
+				<br>
+				<table id="weapon_traits"><tr><th style="background-color:#FF0000" >Precise</th></tr></table><td>
+				<br>
+				This weapon is deadly when having the upper hand against your foe. When you have advantage on your attack this weapon deals an additional 1d4 piercing damage.
+				<br>
+				<br>
+				<table id="weapon_traits"><tr><th style="background-color:#FF0000" >Brutal</th></tr></table><td>
+				<br>
+				When you score a critical hit with this weapon while wielding it with two hands, you may double your ability damage modifier.
+
+
+				
+				</p>
+				</div>
+				<div id="footer" style="margin-top: 70px">Página 7</div>
+			
+			
+		</div>
+
+		<div class="hojahorizontal">
+					<div id="header"></div>
+		
+			<br>
+			<div id="tablahorizontal2">
+				<table class="tabla_hojahorizontal">
+					<tr class="tabla_hojahorizontal_datos"><th>Name</th><th>Cost</th><th>Damage</th><th>Weigth</th><th>Properties</th></tr>
+					<tr class="tabla_hojahorizontal_definidor"><td colspan="5"><b><i>Simple Melee Weapons</i></b></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Cestus</td><td>1 gp</td><td>1d4 <img src="hammer.png"></td><td>1 lb.</td><td>Light, Hidden, <span style="color: #CF5300;">Monk weapon</span>, Special, <span style="color: #FF0000;">Parry, Riposte</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Club</td><td>1 sp</td><td>1d4 <img src="hammer.png"></td><td>2 lb.</td><td>Light</td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Dagger</td><td>2 gp</td><td>1d4 <img src="arrow.png"></td><td>1 lb.</td><td>Finesse, Light, Thrown (range 20/60), <span style="color: #FF0000;">Precise</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>GreatClub</td><td>2 sp</td><td>1d8 <img src="hammer.png"></td><td>10 lb.</td><td>Two-Handed</td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Handaxe</td><td>5 gp</td><td>1d6 <img src="sword.png"></td><td>2 lb.</td><td>Light , Thrown (range 20/60), <span style="color: #FF0000;">Savage(4)</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Javelin</td><td>5 sp</td><td>1d6 <img src="arrow.png"></td><td>2 lb.</td><td>Thrown (range 30/120), <span style="color: #FF0000;">Charge</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Light Hammer</td><td>2 gp</td><td>1d4 <img src="hammer.png"></td><td>2 lb.</td><td>Light , Thrown (range 20/60)</td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Mace</td><td>5 gp</td><td>1d6 <img src="hammer.png"></td><td>4 lb.</td><td><span style="color: #FF0000;">Savage(3)</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Quarterstaff</td><td>2 sp</td><td>1d6 <img src="hammer.png"></td><td>4 lb.</td><td>Versatile (1d8), <span style="color: #FF0000;">Parry(versatile), Riposte</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Scythe</td><td>20pg</td><td>1d10 <img src="sword.png"> or <img src="arrow.png"></td><td>10 lb.</td><td>Heavy, Two-Handed, <span style="color: #FF0000;">Savage(5), Brutal</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Sickle</td><td>1 gp</td><td>1d4 <img src="sword.png"></td><td>2 lb.</td><td>Light, <span style="color: #FF0000;">Parry, Riposte</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Spear</td><td>1 gp</td><td>1d6 <img src="arrow.png"></td><td>3 lb.</td><td>Thrown (range 20/60) , Versatile (1d8), <span style="color: #FF0000;">Charge, Parry(versatile)</span></td></tr>
+					<tr class="tabla_hojahorizontal_definidor"><td colspan="5"><b><i>Martial Melee Weapons</i></b></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Bastard Sword</td><td>100 gp</td><td>1d10 <img src="sword.png"> or <img src="arrow.png"></td><td>6 lb.</td><td>Heavy, Special, Versatile (1d12), <span style="color: #FF0000;">Savage(3), Brutal</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Battleaxe</td><td>10 gp</td><td>1d8 <img src="sword.png"></td><td>3 lb.</td><td>Versatile (1d10), <span style="color: #FF0000;">Savage</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Broadsword</td><td>20 gp</td><td>	2d4 <img src="sword.png"></td><td>4 lb.</td><td>Special, <span style="color: #FF0000;">Parry, Brutal</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Dao</td><td>20 gp</td><td>1d6 <img src="sword.png"></td><td>3 lb.</td><td>Light, Finesse, <span style="color: #CF5300;">Monk weapon</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Double Scimitar</td><td>125 gp</td><td>1d6 <img src="sword.png"></td><td>8 lb.</td><td>Special, Two-Handed, <span style="color: #FF0000;">Parry(versatile), Savage(3)</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Double-Bladed Sword</td><td>150 gp</td><td>1d8 <img src="sword.png"></td><td>10 lb.</td><td>Special, Two-Handed, <span style="color: #FF0000;">Savage(2)</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Falchion</td><td>40 gp</td><td>2d4 <img src="sword.png"></td><td>4 lb.</td><td><span style="color: #FF0000;">Savage</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Flail</td><td>10 gp</td><td>1d8 <img src="hammer.png"></td><td>2 lb.</td><td><span style="color: #FF0000;">Shield-wrap</span></td></tr>
+					
+					<tr class="tabla_hojahorizontal_filapar"><td>Full Blade</td><td>125 gp</td><td>2d8 <img src="sword.png"></td><td>20 lb.</td><td>Heavy, Special, Two-Handed, <span style="color: #FF0000;">Brutal</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Glaive</td><td>20 gp</td><td>1d10 <img src="sword.png">	</td><td>6 lb.</td><td>	Heavy, Reach, Two-Handed, <span style="color: #FF0000;">Savage(3), Brutal</span></td></tr>
+				</table>
+		
+			</div>
+		
+			<div id="footer">Página 8</div>
+			
+		</div>
+		
+		<div class="hojahorizontal">
+			
+			<div id="header"><a id="Equipment"></a></div>
+			<br>
+			<div id="tablahorizontal2">
+				<table class="tabla_hojahorizontal">
+				   <tr class="tabla_hojahorizontal_datos"><th>Name</th><th>Cost</th><th>Damage</th><th>Weigth</th><th>Properties</th></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Greataxe</td><td>30 gp</td><td>1d12 <img src="sword.png"></td><td>7 lb.</td><td>Heavy, Two-Handed, <span style="color: #FF0000;">Savage(2), Brutal</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>GreatSword</td><td>50 gp</td><td>2d6 <img src="sword.png"></td><td>6 lb.</td><td>Heavy, Two-Handed, <span style="color: #FF0000;">Savage(3), Brutal</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Halberd</td><td>20 gp</td><td>1d10 <img src="sword.png"></td><td>6 lb.</td><td>Heavy, Reach, Two-Handed, <span style="color: #FF0000;">Charge</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Heavy Flail</td><td>15 gp</td><td>2d6 <img src="hammer.png"></td><td>10 lb.</td><td>Heavy, Two-Handed, <span style="color: #FF0000;">Shield-wrap</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Katana</td><td>75 gp</td><td>1d6 <img src="sword.png"> or <img src="arrow.png"></td><td>4 lb.</td><td>Finesse, Versatile (1d8), <span style="color: #FF0000;">Parry(versatile), Riposte, Brutal</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Kusarigama</td><td>50 gp</td><td>1d6 <img src="sword.png"></td><td>3 lb.</td><td>Finesse, Light, Thrown (20/60), Special, <span style="color: #FF0000;">Shield-wrap</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Lance</td><td>10 gp</td><td>1d12 <img src="arrow.png"></td><td>6 lb.</td><td>Reach, Special, <span style="color: #FF0000;">Charge</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Long Spear</td><td>32 gp</td><td>1d8 <img src="arrow.png"></td><td>5 lb.</td><td>Heavy, Reach, Versatile (1d10), <span style="color: #FF0000;">Charge, Parry(versatile)</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Longsword</td><td>15 gp</td><td>1d8 <img src="sword.png"></td><td>3 lb.</td><td>Versatile (1d10), <span style="color: #FF0000;">Parry(versatile), Savage(3)</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Maul</td><td>30 gp</td><td>2d6 <img src="hammer.png"></td><td>10 lb.</td><td>Heavy, Two-Handed, <span style="color: #FF0000;">Savage (3), Brutal</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Morningstar</td><td>15 gp</td><td>1d8 <img src="arrow.png"></td><td>4 lb.</td><td><span style="color: #FF0000;">Savage</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Naginata</td><td>25 gp</td><td>1d10 <img src="sword.png"></td><td>4 lb.</td><td>Reach, Two-Handed, <span style="color: #CF5300;">Monk weapon</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>O-Katana</td><td>100 gp.</td><td>1d10 <img src="sword.png"></td><td>6 lb.</td><td>Heavy, Special, Versatile (1d12), <span style="color: #FF0000;">Parry(versatile), Riposte, Brutal</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Pike</td><td>5 gp</td><td>1d10 <img src="arrow.png"></td><td>15 lb.</td><td>Heavy, Reach, Two-Handed, <span style="color: #FF0000;">Charge</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Rapier</td><td>25 gp</td><td>1d6 <img src="arrow.png"></td><td>2 lb.</td><td>Finesse, Special, <span style="color: #FF0000;">Parry, Riposte, Precise</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Scimitar</td><td>25 gp</td><td>1d6 <img src="sword.png"></td><td>3 lb.</td><td>Finesse, Light, <span style="color: #FF0000;">Parry, Riposte, Savage(5)</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Shortsword</td><td>10 gp</td><td>1d6 <img src="arrow.png"></td><td>2 lb.</td><td>Finesse, Light, <span style="color: #FF0000;">Savage(3)</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Steel-capped Staff</td><td>40 gp</td><td>1d8 <img src="hammer.png"></td><td>2 lb.</td><td>Versatile (1d10), <span style="color: #CF5300;">Monk weapon</span>, <span style="color: #FF0000;">Parry(versatile), Riposte</span></td></tr>
+					
+					<tr class="tabla_hojahorizontal_filapar"><td>Swordbreaker Dagger</td><td>20 gp</td><td>1d4 <img src="arrow.png"></td><td>2 lb.</td><td>Light, Finesse, Special, <span style="color: #FF0000;">Parry, Precise</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Three-Sectioned Staff</td><td>4 gp </td><td>1d8 <img src="hammer.png"> </td><td>8 lb.</td><td>Finesse, <span style="color: #CF5300;">Monk weapon</span>, Two-Handed</td></tr>
+					
+					<tr class="tabla_hojahorizontal_filapar"><td>Trident</td><td>5 gp</td><td>1d6 <img src="arrow.png"></td><td>4 lb.</td><td>Thrown (range 20/60), Versatile (1d8), <span style="color: #FF0000;">Charge, Parry(versatile)</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>War Fan</td><td>30 gp</td><td>1d6 <img src="sword.png"></td><td>3 lb.</td><td>Finesse, Light, <span style="color: #CF5300;">Monk weapon</span>, <span style="color: #FF0000;">Parry</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>War Pick</td><td>5 gp</td><td>1d8 <img src="arrow.png"></td><td>2 lb.</td><td><span style="color: #FF0000;">Savage</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>War Scythe </td><td>50 gp </td><td>1d12 <img src="sword.png"> </td><td>9 lb.</td><td>Heavy, Reach, Two-Handed, Special</td></tr>
+					
+				</table>
+		
+			</div>
+		
+			<div id="footer">Página 9</div>
+			
+		</div>
+		
+		<div class="hojahorizontal2">
+	
+			<div id="header"></div>
+			<br>
+			<div id="tablahorizontal2">
+				<table class="tabla_hojahorizontal">
+					<tr class="tabla_hojahorizontal_datos"><th>Name</th><th>Cost</th><th>Damage</th><th>Weigth</th><th>Properties</th></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Warhammer</td><td>15 gp</td><td>1d8 <img src="hammer.png"></td><td>2 lb.</td><td>Versatile (1d10), <span style="color: #FF0000;">Savage</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Whip</td><td>2 gp</td><td>1d4 <img src="sword.png"></td><td>3 lb.</td><td>Finesse, Special, Reach, <span style="color: #FF0000;">Shield-wrap</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Whip-Dagger</td><td>25 gp </td><td>1d6 <img src="sword.png"></td><td>3 lb.</td><td>Finesse, Special, Reach, <span style="color: #FF0000;">Shield-wrap</span></td></tr>
+					
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Zweihänder</td><td>90 gp</td><td>3d4 <img src="sword.png"></td><td>7 lb</td><td>Heavy, Two-handed, Reach, Special, <span style="color: #FF0000;">Savage(4), Brutal</span></td></tr>
+					<tr class="tabla_hojahorizontal_definidor"><td colspan="5"><b><i>Simple Ranged Weapons</i></b></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Dart</td><td>5 cp </td><td>1d4 <img src="arrow.png"></td><td>1/4 lb.</td><td>Finesse, Thrown (range 20/60 ft.)</td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Light Crossbow</td><td>25 gp </td><td>1d8 <img src="arrow.png"></td><td>5 lb.</td><td>Ammunition (range 60/180 ft.), Loading, Two-Handed, <span style="color: #FF0000;">Savage(4)</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Shortbow</td><td>25 gp </td><td>1d6 <img src="arrow.png"></td><td>2 lb.</td><td>Ammunition (range 60/180 ft.), Two-Handed, <span style="color: #FF0000;">Brutal</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Sling</td><td>1 sp </td><td>1d4 <img src="hammer.png"></td><td>-</td><td>Ammunition (range 30/120 ft.)</td></tr>
+					<tr class="tabla_hojahorizontal_definidor"><td colspan="5"><b><i>Martial Ranged Weapons</i></b></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Blowgun</td><td>10 gp</td><td>1 <img src="arrow.png"></td><td>1 lb.</td><td>Ammunition (range 25/75 ft.), Loading, <span style="color: #FF0000;">Precise</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Boomerang</td><td>10 gp</td><td>1d4 <img src="hammer.png"></td><td>2 lb.</td><td>Finesse, Light, Special, Thrown (Range 20/60 ft.)</td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Greatbow</td><td>90 gp</td><td>1d10 <img src="arrow.png"></td><td>6 lb.</td><td>Ammunition (range 80/200 ft.), Heavy, Two-Handed, Special, <span style="color: #FF0000;">Brutal</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Hand Crossbow</td><td>75 gp</td><td>1d6 <img src="arrow.png"></td><td>3 lb.</td><td>Ammunition (range 30/90 ft.), Light, Loading, <span style="color: #FF0000;">Savage(5)</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Harpoon</td><td>15 gp</td><td>1d10 <img src="arrow.png"></td><td>6 lb.</td><td>Ranged, Special, Thrown (Range 20/60 ft.)</td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Heavy Crossbow</td><td>50 gp</td><td>1d10 <img src="arrow.png"></td><td>8 lb.</td><td>Ammunition (range 80/200 ft.), Heavy, Loading, Two-Handed, <span style="color: #FF0000;">Savage(3)</span></td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Longbow</td><td>50 gp</td><td>1d8 <img src="arrow.png"></td><td>2 lb.</td><td>Ammunition (range 100/300 ft.), Heavy, Two-Handed, <span style="color: #FF0000;">Brutal</span></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Net</td><td>1 gp</td><td>—</td><td>3 lb.</td><td>Special, Thrown (range 5/15)</td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Slingshot</td><td>5 sp</td><td>1d4 <img src="hammer.png"></td><td>1 lb.</td><td>Ammunition (Range 20/60 ft.), Finesse, Two-Handed, <span style="color: #FF0000;">Precise</span></td></tr>	
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Throwing knives</td><td>8 sp</td><td>1d4 <img src="sword.png"></td><td>1/2 lb.</td><td>Light, Finesse, Thrown (20/60 ft.), Special</td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Wrist Crossbow</td><td>130 gp</td><td>1d6 <img src="arrow.png"></td><td>2 lb.</td><td>Ammunition (Range 25/75 ft.), Light, Loading, Special</td></tr>
+				</table>
+				
+			</div>
+			
+			<div id="footer">Página 10</div>
+			
+		</div>
+		
+		<div class="hojavertical">
+				
+				<div id="contenido">
+				<p>
+				<h2>SPECIAL WEAPONS</h2>
+				<b>Bastard Sword.</b> This particular weapon is too large to wield in one hand normally unless you meet a specific strength requirement. You must have a Strength score of at least 19 or suffer disadvantage on all attacks made with this weapon. Additionally this weapon may apply the brutal trait even when used with one hand.
+				<br>
+				<br>
+				<br>
+				<b>Boomerang.</b> This weapon will return to you if you fail to hit your target. Using your reaction, you can catch it by succeeding a DC 10 Dexterity check.
+				<br>
+				<br>
+				<br>
+				
+				<b>Broadsword.</b> This weapon may apply the brutal trait while being a one-handed weapon.
+				<br>
+				<br>
+				<br>
+				<b>Cestus.</b> Donning or doffing this glove-like weapon requires an action and you may hold another weapon in the same hand as the cestus. Unarmed strikes deal 1d4 <img src="hammer.png"> damage whilst the cestus worn.
+				<br>
+				<br>
+				<br>
+				<b>Double Scimitar.</b> You can treat this weapon as if you are dual wielding and apply any relevant feats when wielding this weapon
+				<br>
+				<br>
+				<br>
+				<b>Double-Bladed Sword.</b> You can treat this weapon as if you are dual wielding and apply any relevant feats when wielding this weapon but it needs either the Dual Wielder feat or the Revenant Blade feat to be used without disadvantage.
+				<br>
+				<br>
+				<br>
+				<b>Full Blade.</b> This particular weapon is too large to wield normally unless you meet a specific strength requirement. You must have a Strength score of at least 19 or suffer disadvantage on all attacks made with this weapon.
+				
+				<br>
+				
+				<br>
+				
+				<br>
+				
+				<b>Greatbow.</b> You need at least a 17 Strength score to use effectively, or you have disadvantage on attack rolls with it. You use your Strength modifier for attack and damage rolls. You can use javelins as ammunition.
+				
+				<br>
+				
+				<br>
+				
+				<br>
+				
+				<b>Harpoon.</b> Whenever you land an attack with this weapon, it pierces into the enemy. They can choose to pull it out and deal an additional 1d10 of damage. As long as it remains in their body and you are holding on to the rope that the harpoon is attached to, they cannot move further away than 30 feet from you. They can attempt to yank the rope out of your hand by making a Strength check versus your own Strength check. Otherwise, they have to cut the line or pull out the harpoon to escape.
+				
+				<br>
+				
+				<br>
+				
+				<br>
+				
+				<b>Kusarigama.</b> This sickle-like weapon has a chain with a weight at the end. When you make a ranged attack by throwing the kusarigama you can pull the weapon back to your hand by the chain as part of the attack.
+				
+				<br>
+				<br>
+				<br>
+				
+				<b>Lance.</b> You have disadvantage when you use a lance to Attack a target within 5 feet of you. Also, a lance requires two hands to wield when you aren’t mounted.
+				<br>
+				<br>
+				<br>
+				<b>O-Katana.</b> This particular weapon is too large to wield in one hand normally unless you meet a specific strength requirement. You must have a Strength score of at least 19 or suffer disadvantage on all attacks made with this weapon.
+				
+				</p>
+				</div>
+				<div id="footer" style="margin-top: 70px">Página 11</div>
+			
+		</div>
+		<div class="hojavertical">
+			
+				<div id="header"></div>
+				<br>
+				<div id="contenido">
+				<p>
+				<h2></h2>				
+				<b>Rapier.</b> You may use this weapon to dual wield as long as it is with a dagger without requiring the dual wielder feat.
+				<br>
+				<br>
+				<br>
+				<b>Slingshot.</b> This ranged weapon utilizes ball bearings as ammunition.
+				
+				<br>
+				<br>
+				<br>
+				
+				<b>Swordbreaker.</b> When you hit with this weapon a creature of your size or smaller thats wielding a slashing weapon, the creature must make a either STR or DEX Saving throw (its choice) or drop the weapon its currently carrying on its hands. if its a two-handed weapon it makes the Save with advantage.
+				<br>
+				<br>
+				<br>
+				<b>Throwing knives.</b> You can throw up to 2 throwing knives as part of an attack when you take the attack action; for each thrown above the first you add an additional damage die.
+				<br>
+				<br>
+				<br>
+				<b>War Scythe.</b> If you have the polearm master feat you can wield this weapon with one hand if you have 19 STR.
+				
+				<br>
+				<br>
+				<br>
+				
+				<b>Whip.</b> When you hit with this weapon a creature of your size or smaller, the creature must make a either STR or DEX Saving throw (its choice) or drop the weapon or object its currently carrying on its hands. if its a two-handed object it makes the Save with advantage.
+				<br>
+				<br>
+				<br>
+				<b>Wrist Crossbow.</b> You cannot be disarmed of this weapon.
+				
+				<br>
+				<br>
+				<br>
+				
+				<b>Zweihänder.</b> You require a Strength score of 15 or higher to use this weapon effectively, else your attacks have disadvantage.
+				
+				</p>
+				</div>
+				<div id="footer">Página 12</div>
+			
+		</div>
+		
+		<div class="hojahorizontal2">
+			
+			<div id="header"><a id="Firearms">Firearms</a></div>
+			<br>
+			<div id="tablahorizontal" style="height: 700px">
+				<table class="tabla_hojahorizontal" style="height: 200px;margin-bottom: 20px;">
+					<tr class="tabla_hojahorizontal_datos"><th>Name</th><th>Cost</th><th>Damage</th><th>Range</th><th>Weigth</th><th>Properties</th></tr>
+					<tr class="tabla_hojahorizontal_definidor"><td colspan="6"><b><i>Weapons</i></b></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Pistol</td><td>150 gp</td><td>1d8 <img src="arrow.png"></td><td>30/90ft</td><td>3 lb.</td><td>Loading, Misfire 1, Savage(5)</td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Pepperbox</td><td>300 gp</td><td>1d10 <img src="arrow.png"></td><td>40/120ft</td><td>5 lb.</td><td>Loading, Misfire 2, Savage(5)</td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Musket</td><td>350 gp</td><td>1d12 <img src="arrow.png"></td><td>60/180ft</td><td>10 lb.</td><td>Two-Handed, Loading, Misfire 2, Savage(3)</td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Blunderbuss</td><td>350 gp</td><td>2d6 <img src="arrow.png"></td><td>15ft(Spread)/30</td><td>10 lb.</td><td>Two-Handed, Loading, Misfire 2, Spread</td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Carbine</td><td>450 gp</td><td>2d6 <img src="arrow.png"></td><td>80/200ft</td><td>7 lb.</td><td>Two-Handed, Loading, Misfire 3, Caliber, Savage(4)</td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Arquebus</td><td>500 gp</td><td>2d8 <img src="arrow.png"></td><td>80/200ft</td><td>14 lb.</td><td>Two-Handed, Loading, Misfire 2, Heavy, Savage(5)</td></tr>
+				</table>
+				<table class="tabla_hojahorizontal" style="height: 200px">
+					<tr class="tabla_hojahorizontal_datos"><th>Name</th><th style="width: 150px" >Cost</th><th colspan="4">Properties</th></tr>
+					<tr class="tabla_hojahorizontal_definidor"><td colspan="6"><b><i>Ammo</i></b></td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Normal Bullet</td><td>5gp per 20 bullets.</td><td colspan="4">--</td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Tracing Bullet</td><td>15gp per 10 bullets</td><td colspan="4">Special</td></tr>
+					<tr class="tabla_hojahorizontal_filaimpar"><td>Long Round</td><td>30gp per 10 bullets</td><td colspan="4">Special</td></tr>
+					<tr class="tabla_hojahorizontal_filapar"><td>Explosive round</td><td>20gp per 5 rounds</td><td colspan="4">Special</td></tr>
+					
+					<tr class="tabla_hojahorizontal_definidor"><td colspan="6"><b><i>Tools</i></b></td></tr>
+					
+					<tr class="tabla_hojahorizontal_filapar"><td>Firearm Maintenance tools</td><td>150gp</td><td colspan="4">You may use this tools as part of a long rest to ignore the next missfire you suffer. This tools has 10 uses.</td></tr>
+				</table>
+				
+				<h2>SPECIAL AMMO</h2>
+				<b>Every type of ammo can be made magical for 3 times the original price.</b>
+				
+				<br>
+				<br>
+				
+				<b>Tracing Bullet.</b> The target takes 1d6 fire damage at the start of each of its turns and cannot benefit from the effects of invisibility for 1 min. When the creature takes this damage it may make a Con save against your attack DC to end this effect prematurely.
+				
+				<br>
+				<br>
+				<b>Long Round.</b> When you hit a creature with this bullet you may make an additional attack against a creature within 5ft of the original one thats on a direct line from you, if this attack hits, that second creature takes damage equal to half the damage the original creature took.
+				<br>
+				
+				<br>
+				
+				<b>Explosive Round.</b> Ignore the damage of the weapon and deal 1d8 fire damage to every creature within 5ft of the target including the target itself.
+				<div id="contenido">
+				<h2>SPECIAL PROPERTIES</h2>
+					<b>Spread.</b> When you make an attack with this weapon within your "close" range, you may choose to forgo your normal attack to force all creatures in the area to make a Dexterity Saving Throw with a DC equal to your attack DC or receive the damage. This attack doesn't add your ability modifier to the damage. This type of attack counts as a melee attack for the purposes of flanking. Spread weapons cant use Explosive rounds.
+					<br>
+					<br>
+					<b>Caliber.</b> When you score a critical hit with this weapon you deal an additional die of damage.
+					<br>
+					<br>
+					<b>Misfire.</b> Whenever you make an attack roll with a firearm, and the dice roll is equal to or lower than the weapon’s Misfire score, the weapon misfires. The attack misses, and the weapon cannot be used again until you spend an action to try and repair it. To repair your firearm, you must make a successful Tinker’s Tools check (DC equal to 8 + misfire score). If your check fails, the weapon is broken and must be mended out of combat at a quarter of the cost of the firearm. Creatures who use a firearm without being proficient increase the weapon’s misfire score by 1.
+					<br>
+					<br>
+					<b>Reload.</b> The weapon can be fired a number of times equal to its Reload score before you must spend 1 attack or 1 action to reload. You must have one free hand to reload a firearm.
+				</div>
+			</div>
+			
+			<div id="footer" style="margin-top: 373px;">Página 13</div>
+			
+		</div>
+		
+		<div class="hojahorizontal">
+			
+		<div id="header"><a id="Armor">ARMOR</a></div>
+		<br>
+		<div id="tablahorizontal">
+			<table class="tabla_hojahorizontal">
+				<tr class="tabla_hojahorizontal_datos"><th>Name</th><th>Cost</th><th>Armor Class (AC)</th><th>Strength</th><th>Stealth</th><th>Weigth</th><th>Properties</th></tr>
+				<tr class="tabla_hojahorizontal_definidor"><td colspan="7"><b><i>Armor</i></b></td></tr>
+				<tr class="tabla_hojahorizontal_definidor"><td colspan="7" style="text-align: left;padding-left: 20px;"><b><i>Light Armor</i></b></td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Padded</td><td>5 gp</td><td>11 + Dex</td><td>-</td><td>Disadvantage</td><td>8 lb.</td><td>-</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Gambeson <span style="color: grey;">(Leather armor)</span></td><td>15 gp	</td><td>11 + Dex</td><td>-</td><td>-</td><td>8 lb.</td><td>-</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Leather jerkin <span style="color: grey;">(Studded leather)</span></td><td>45 gp</td><td>12 + Dex</td><td>-</td><td>-</td><td>10 lb.</td><td>-</td></tr>
+				<tr class="tabla_hojahorizontal_definidor"><td colspan="7" style="text-align: left;padding-left: 20px;"><b><i>Medium Armor</i></b></td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Hide</td><td>10 gp</td><td>12 + Dex (max 2)</td><td>-</td><td>-</td><td>12 lb.</td><td>-</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Mail shirt <span style="color: grey;">(Chain shirt)</span></td><td>60 gp</td><td>13 + Dex (max 2)</td><td>-</td><td>-</td><td>25 lb.</td><td>-</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Lamellar <span style="color: grey;">(Scale mail)</span></td><td>150 gp</td><td>14 + Dex (max 2)</td><td>-</td><td>Disadvantage</td><td>20 lb.</td><td>-</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Hauberk <span style="color: grey;">(Breastplate)</span></td><td>250 gp</td><td>14 + Dex (max 2)</td><td>-</td><td>-</td><td>30 lb.</td><td>-</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Brigandine <span style="color: grey;">(Half Plate)</span></td><td>450 gp</td><td>15 + Dex (max 2)</td><td>-</td><td>Disadvantage</td><td>40 lb.</td><td>Special</td></tr>
+				<tr class="tabla_hojahorizontal_definidor"><td colspan="7" style="text-align: left;padding-left: 20px;"><b><i>Heavy Armor</i></b></td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Ring Mail</td><td>30 gp</td><td>14</td><td>-</td><td>Disadvantage</td><td>40 lb.</td><td>-</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Cuirass <span style="color: grey;">(Chain Mail)</span></td><td>90 gp</td><td>16</td><td>Str 13</td><td>Disadvantage</td><td>30 lb.</td><td>-</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Half plate <span style="color: grey;">(Splint)</span></td><td>450 gp</td><td>17</td><td>Str 15</td><td>Disadvantage</td><td>45 lb.</td><td>-</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Plate</td><td>900 gp</td><td>18</td><td>Str 15</td><td>Disadvantage</td><td>65 lb.</td><td>-</td></tr>
+				<tr class="tabla_hojahorizontal_definidor"><td colspan="7"><b><i>Shield</i></b></td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Wrist Buckler</td><td>10 gp</td><td>+1</td><td>-</td><td>-</td><td>3 lb.</td><td>Light, Special</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Skirmisher</td><td>20 gp</td><td>+2</td><td>-</td><td>-</td><td>6 lb.</td><td>-</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Aspis</td><td>75 gp</td><td>+3</td><td>Str 15</td><td>Disadvantage</td><td>15 lb.</td><td>Heavy</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Tower Shield</td><td>150 gp</td><td>+4</td><td>Str 18</td><td>Disadvantage</td><td>40 lb.</td><td>Heavy, Special</td></tr>
+				<tr class="tabla_hojahorizontal_definidor"><td colspan="7" style="text-align: left;padding-left: 20px;"><b><i>Extra</i></b></td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Armor Blades</td><td>50 gp</td><td>-</td><td>-</td><td>-</td><td>+10 lb.</td><td>Special</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Armor Spikes</td><td>50 gp</td><td>-</td><td>-</td><td>-</td><td>+10 lb.</td><td>Special</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Shield Spikes</td><td>10 gp</td><td>-</td><td>-</td><td>-</td><td>+5 lb.</td><td>Special</td></tr>
+				
+			</table>
+		
+		</div>
+		<div id="footer">Página 14</div>
+			
+	</div>
+	<div class="hojavertical">
+			
+				<div id="header"></div>
+				<br>
+				<div id="contenido">
+				<p>
+				<h2>SPECIAL SHIELDS AND EXTRAS</h2>
+				<b>Armor Blades.</b> Whenever you succeed on a grapple check or are grappled by an enemy, that creature takes 3 <img src="sword.png"> damage.
+				<br>
+				<br>
+				<br>
+				<b>Armor Spikes.</b> Whenever you succeed on a grapple check or are grappled by an enemy, that creature takes 3 <img src="arrow.png"> damage.
+				<br>
+				<br>
+				<br>
+				<b>Brigandine armor.</b> For an additional 50 gold you can make so the armor ignores the stealth disadvantage.
+				<br>
+				<br>
+				<br>
+				<b>Shield Spikes.</b> If you have the Shield Master feat and utilize the ability to shove a creature, that creature takes 3 <img src="arrow.png"> damage.
+				<br>
+				<br>
+				<br>
+				<b>Skirmisher.</b> A successful shove using this shield deals d4 + STR mod as <img src="hammer.png"> damage
+				<br>
+				<br>
+				<br>
+				<b> Tower Shield. </b> You can’t make opportunity attacks while holding this shield.
+				
+				<br>
+				
+				<br>
+				
+				<br>
+				<b>Wrist Buckler.</b> You can attack with a weapon held in the same arm that this shield is attached to and still gain the AC bonus. You can only wield a light weapon in whatever arm this shield is strapped to. Additionally you can use the versatile property on a weapon with this shield attatched and still gain the AC bonus
+				<br>
+				<br>
+				<br>				
+				</p>
+				</div>
+				<div id="footer">Página 15</div>
+			
+		</div>
+		
+		<div class="hojahorizontal2">
+	
+		<div id="header"><a id="Alchemist">Alchemist</a></div>
+		<br>
+		<div id="tablahorizontal2">
+			<table class="tabla_hojahorizontal">
+				<tr class="tabla_hojahorizontal_datos"><th>Name</th><th>Rarity</th><th>Value</th><th>Crafting Cost</th><th>Minimun Level</th><th>Special Requirements</th></tr>
+				<tr class="tabla_hojahorizontal_definidor"><td colspan="6"><b><i>Herbalism Kit</i></b></td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Potion of Healing</td><td>Common</td><td>50 gp</td><td>25gp</td><td>--</td><td>--</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Potion of Greater Healing</td><td>Uncommon</td><td>250 gp</td><td>125 gp</td><td>3rd</td><td>Ability Check</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Potion of Superior Healing</td><td>Rare</td><td>1000 gp</td><td>500 gp</td><td>6th</td><td>Ability Check</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Potion of Supreme Healing</td><td>Very Rare</td><td>5000 gp</td><td>2500 gp</td><td>11th</td><td>Ability Check</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td style="height: 25px"></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Antitoxin</td><td>Common</td><td>50 gp</td><td>25 gp</td><td>2 days</td><td>--</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Keoghtom's Ointment</td><td>Uncommon</td><td>80 gp</td><td>40 gp</td><td>3rd</td><td>Rare cactus from a desert</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Potion of Resistance</td><td>Uncommon</td><td>300 gp</td><td>150 gp</td><td>3rd</td><td>3rd lvl spell slot , Special material</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Potion of Animal Friendship</td><td>Uncommon</td><td>200 gp</td><td>100 gp</td><td>3rd</td><td>1st lvl spell slot</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Potion of Water Breathing</td><td>Uncommon</td><td>180 gp</td><td>90 gp</td><td>3rd</td><td>3rd lvl spell slot</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Elixir of Health</td><td>Rare</td><td>150 gp</td><td>100 gp</td><td>6th</td><td>2nd lvl spell slot</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Potion of Vitality</td><td>Very Rare</td><td>2000 gp</td><td>1000gp</td><td>11th</td><td>Troll Blood</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Sovereign Glue</td><td>Legendary</td><td>40 000 gp</td><td>20 000 gp</td><td>17th</td><td>--</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Universal Solvent</td><td>Legendary</td><td>40 000 gp</td><td>20 000 gp</td><td>17th</td><td>--</td></tr>
+				<tr class="tabla_hojahorizontal_definidor"><td colspan="6"><b><i>Alchemist's Supplies</i></b></td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Acid</td><td>Common</td><td>25 gp</td><td>13 gp</td><td>--</td><td>--</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Alchemist's Fire</td><td>Common</td><td>50 gp</td><td>25 gp</td><td>--</td><td>--</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Potion of Climbing</td><td>Common</td><td>180 gp</td><td>90 gp</td><td>--</td><td>--</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Philter of Love</td><td>Uncommon</td><td>80 gp</td><td>40 gp</td><td>3rd</td><td>Light from a fullmoon</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Potion of Fire Breath</td><td>Uncommon</td><td>150 gp</td><td>75 gp</td><td>3rd</td><td>Boiled on dragon (or dragonborn) fire</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Potion of Hill Giant Strength</td><td>Uncommon</td><td>500 gp</td><td>250 gp</td><td>3rd</td><td>Hill giant fingernail</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Potion of Growth</td><td>Uncommon</td><td>270 gp</td><td>135 gp</td><td>3rd</td><td>2nd lvl spell slot</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Potion of Claravoyance</td><td>Rare</td><td>960 gp</td><td>480 gp</td><td>6th</td><td>3rd lvl spell slot</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Potion of Diminution</td><td>Rare</td><td>270 gp</td><td>135 gp</td><td>6th</td><td>2nd lvl spell slot , Shapechanging's blood</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Potion of Gaseous Form</td><td>Rare</td><td>300 gp</td><td>150 gp</td><td>6th</td><td>3rd lvl spell slot</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Potion of Frost Giant Strength</td><td>Rare</td><td>1250 gp</td><td>625 gp</td><td>6th</td><td>Frost giant fingernail</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Potion of Stone Giant Strength</td><td>Rare</td><td>1250 gp</td><td>625 gp</td><td>6th</td><td>Stone giant fingernail</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Potion of Heroism</td><td>Rare</td><td>180 gp</td><td>90 gp</td><td>6th</td><td>Ability Check</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Potion of Invulnerability</td><td>Rare</td><td>4000 gp</td><td>2000 gp</td><td>6th</td><td>Ability Check , Dragon tongue</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Potion of Mind Reading</td><td>Rare</td><td>400 gp</td><td>200 gp</td><td>6th</td><td>2nd lvl spell slot , Mindflayer tentacle</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Potion of Fire Giant Strength</td><td>Rare</td><td>2500 gp</td><td>1250 gp</td><td>6th</td><td>Fire giant fingernail</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Potion of Invisibility</td><td>Very Rare</td><td>170 gp</td><td>85gp</td><td>11th</td><td>2nd lvl spell slot , Ectoplasm</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Potion of Speed</td><td>Very Rare</td><td>800 gp</td><td>400gp</td><td>11th</td><td>3rd lvl spell slot , Brewed in motion</td></tr>
+			</table>
+				
+		</div>
+			
+		<div id="footer">Página 16</div>
+			
+	</div>
+	<div class="hojahorizontal">
+	
+		<div id="header"></div>
+		<br>
+		<div id="tablahorizontal">
+			<table class="tabla_hojahorizontal">
+				<tr class="tabla_hojahorizontal_datos"><th>Name</th><th>Rarity</th><th>Value</th><th>Crafting Cost</th><th>Minimun Level</th><th>Special Requirements</th></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Potion of Flying</td><td>Very Rare</td><td>500 gp</td><td>250gp</td><td>11th</td><td>3rd lvl spell slot , Brewed on mountain ,<br> Giant feather</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Potion of Cloud Giant Strength</td><td>Very Rare</td><td>4000 gp</td><td>2000gp</td><td>11th</td><td>Cloud giant fingernail</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Potion of Longevity</td><td>Very Rare</td><td>9000 gp</td><td>4500gp</td><td>11th</td><td>Unicorn's hair</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Potion of Storm Giant Strength</td><td>Legendary</td><td>8000 gp</td><td>4000 gp</td><td>17th</td><td>Storm giant fingernail</td></tr>
+				<tr class="tabla_hojahorizontal_definidor"><td colspan="6"><b><i>Poisoner's Kit</i></b></td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Oil of Slipperiness</td><td>Uncommon</td><td>80 gp</td><td>40 gp</td><td>3rd</td><td>4th lvl spell slot</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Dust of Disappearance</td><td>Uncommon</td><td>200 gp</td><td>100 gp</td><td>3rd</td><td>DM rolls ability check (see dust of sneezing)</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Dust of Dryness</td><td>Uncommon</td><td>80 gp</td><td>40 gp</td><td>3rd</td><td>1st lvl spell slot</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Dust of Sneezing and chocking</td><td>Uncommon</td><td>80 gp</td><td>40 gp</td><td>3rd</td><td>Failed "Dust of disappearance"</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Potion of Poison</td><td>Uncommon</td><td>80 gp</td><td>40 gp</td><td>3rd</td><td>1 potion (healing or whatever)</td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Assasin's Blood</td><td>Uncommon</td><td>150 gp</td><td>75 gp</td><td>.</td><td><span style="color: green;">Type: Ingested</span></td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Truth Serum</td><td>Uncommon</td><td>150 gp</td><td>75 gp</td><td>.</td><td><span style="color: green;">Type: Ingested</span></td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Crawler Mucus</td><td>Uncommon</td><td>200 gp</td><td>100 gp</td><td>.</td><td><span style="color: green;">Type: Contact</span></td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Drow Poison</td><td>Uncommon</td><td>200 gp</td><td>100 gp</td><td>.</td><td><span style="color: green;">Type: Injury</span></td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Serpent Venom</td><td>Uncommon</td><td>200 gp</td><td>100 gp</td><td>.</td><td><span style="color: green;">Type: Injury</span></td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Malice</td><td>Uncommon</td><td>250 gp</td><td>125 gp</td><td>.</td><td><span style="color: green;">Type: Inhaled</span></td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Pale Tincture</td><td>Uncommon</td><td>250 gp</td><td>125 gp</td><td>.</td><td><span style="color: green;">Type: Ingested</span></td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Essence of Ether</td><td>Uncommon</td><td>300 gp</td><td>150 gp</td><td>.</td><td><span style="color: green;">Type: Inhaled</span></td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Oil of Etherealness</td><td>Rare</td><td>1920 gp</td><td>960 gp</td><td>6th</td><td>11th lvl spell slot</td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Oil of Taggit</td><td>Rare</td><td>400 gp</td><td>200 gp</td><td>.</td><td><span style="color: green;">Type: Contact</span></td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Burnt othur Fumes</td><td>Rare</td><td>500 gp</td><td>250 gp</td><td>.</td><td><span style="color: green;">Type: Inhaled</span></td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Torpor</td><td>Rare</td><td>600 gp</td><td>300 gp</td><td>.</td><td><span style="color: green;">Type: Ingested</span></td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Wyvern Poison</td><td>Rare</td><td>1200 gp</td><td>600 gp</td><td>.</td><td><span style="color: green;">Type: Injured</span></td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Midnight Tears</td><td>Rare</td><td>1500 gp</td><td>750 gp</td><td>.</td><td><span style="color: green;">Type: Ingested</span></td></tr>
+				<tr class="tabla_hojahorizontal_filapar"><td>Purple Worm Poison</td><td>Rare</td><td>2000 gp</td><td>1000 gp</td><td>.</td><td><span style="color: green;">Type: Injury</span></td></tr>
+				<tr class="tabla_hojahorizontal_filaimpar"><td>Oil of Sharpness</td><td>Very Rare</td><td>4000 gp</td><td>2000gp</td><td>11th</td><td>Brewed in a silver mine</td></tr>
+			</table>
+				
+		</div>
+			
+		<div id="footer">Página 17</div>
+			
+	</div>
+	<div class="hojavertical">
+			
+				<div id="contenido3">
+				<p>
+				<h2>HERBALISM KIT</h2>
+				<b>Potion of Healing.</b> You regain <b>2d4 + 2 Hit Points</b> when you drink this potion. The potion's red liquid glimmers when agitated.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Greater Healing.</b> You regain <b>4d4 + 4 Hit Points</b> when you drink this potion. The potion's red liquid glimmers when agitated.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Superior Healing.</b> You regain <b>8d4 + 8 Hit Points</b> when you drink this potion. The potion's red liquid glimmers when agitated.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Supreme Healing.</b> You regain <b>10d4 + 20 Hit Points</b> when you drink this potion. The potion's red liquid glimmers when agitated.
+				<br>
+				<br>
+				<br>
+				<b>Antitoxin.</b> Drinks this vial gives advantage on Saving Throws against poison for 1 hour. It confers no benefit to Undead or constructs.
+				<br>
+				<br>
+				<br>
+				<b>Keoghtom's Ointment.</b> The creature that receives it regains 2d8 + 2 hit points, ceases to be poisoned, and is cured of any disease.  Can be swallowed or applied to the skin.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Resistance.</b> When you drink this potion, you gain resistance to one type of damage for 1 hour. The DM chooses the type or determines it randomly.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Animal Friendship.</b> When you drink this potion, you can cast the Animal Friendship spell (save DC 13) for 1 hour at will. Agitating this muddy liquid brings little bits into view: a fish scale, a hummingbird tongue, a cat claw, or a squirrel hair.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Water Breathing.</b> You can breathe Underwater for 1 hour after drinking this potion. Its cloudy green fluid smells of the sea and has a jellyfish-like bubble floating in it.
+				<br>
+				<br>
+				<br>
+				<b>Elixir of Health.</b> When you drink this potion, it cures any disease afflicting you, and it removes the blinded, deafened, paralyzed, and poisoned conditions. The clear red liquid has tiny bubbles of light in it.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Vitality.</b> When you drink this potion, it removes any exhaustion you are suffering and cures any disease or poison affecting you. For the next 24 hours, you regain the maximum number of hit points for any Hit Die you spend. The potion's crimson liquid regularly pulses with dull light, calling to mind a heartbeat.
+				<br>
+				<br>
+				<br>
+				<b>Sovereign Glue.</b> This viscous, milky-white substance can form a permanent adhesive bond between any two Objects. It must be stored in a jar or flask that has been coated inside with Oil of Slipperiness. When found, a container contains 1d6 + 1 ounces.
+				<br>
+				<br>
+				One ounce of the glue can cover a 1-foot square surface. The glue takes 1 minute to set. Once it has done so, the bond it creates can be broken only by the application of Universal Solvent or Oil of Etherealness, or with a wish spell.
+				<br>
+				<br>
+				<b>Universal Solvent.</b> This tube holds milky liquid with a strong alcohol smell. You can use an action to pour the contents of the tube onto a surface within reach. The liquid instantly dissolves up to 1 square foot of adhesive it touches, including Sovereign Glue.
+				</p>
+				</div>
+				<div id="footer">Página 18</div>
+			
+		</div>
+		<div class="hojavertical">
+			
+				<div id="contenido3">
+				<p>
+				<h2>ALCHEMIST'S SUPPLIES</h2>
+				<b>Acid.</b> As an action, you can splash the contents of this vial onto a creature within 5 feet of you or throw the vial up to 20 feet, shattering it on impact. In either case, make a ranged Attack against a creature or object, treating the acid as an Improvised Weapon. On a hit, the target takes 2d6 acid damage. (range 20/60 , weight 1 lb.)
+				<br>
+				<br>
+				<br>
+				<b>Alchemist's Fire.</b> Same as Acid (above this) but 1d4 fire damage and it's a DEX save.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Climbing.</b> When you drink this potion, you gain a climbing speed equal to your walking speed for 1 hour. During this time, you have advantage on Strength (Athletics) checks you make to climb. The potion is separated into brown, silver, and gray layers resembling bands of stone. Shaking the bottle fails to mix the colors.
+				<br>
+				<br>
+				<br>
+				<b>Philter of Love.</b> The next time you see a creature within 10 minutes after drinking this philter, you become Charmed by that creature for 1 hour. If the creature is of a species and gender you are normally attracted to, you regard it as your true love while you are Charmed. This potion's rose-hued, effervescent liquid contains one easy-to-miss bubble shaped like a heart.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Fire Breath.</b> After drinking this potion, you can use a bonus action to exhale fire at a target within 30 feet of you. The target must make a DC 13 Dexterity saving throw, taking 4d6 fire damage on a failed save, or half as much damage on a successful one. The effect ends after you exhale the fire three times or when 1 hour has passed. This potion's orange liquid flickers, and smoke fills the top of the container and wafts out whenever it is opened.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Hill Giant Strength.</b> When you drink this potion, your Strength score changes to 21 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. This potion's transparent liquid has floating in it a sliver of fingernail from a hill giant.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Growth.</b> When you drink this potion, you gain the “enlarge” effect of the enlarge/reduce spell for 1d4 hours (no concentration required). The red in the potion’s liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Claravoyance.</b> When you drink this potion, you gain the effect of the clairvoyance spell. An eyeball bobs in this yellowish liquid but vanishes when the potion is opened.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Diminution.</b> Same as Potion od Growth but "reduce" instead of "enlarge".
+				<br>
+				<br>
+				<br>
+				<b>Potion of Gaseous Form.</b> When you drink this potion, you gain the effect of the gaseous form spell for 1 hour (no concentration required) or until you end the effect as a bonus action. This potion’s container seems to hold fog that moves and pours like water.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Frost Giant Strength.</b> Same as Potion of Fill Giant Strength but 23 of Strenght. This potion's transparent liquid has floating in it a sliver of fingernail from a frost giant.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Stone Giant Strength.</b> Same as Potion of Fill Giant Strength but 23 of Strenght. This potion's transparent liquid has floating in it a sliver of fingernail from a stone giant.
+				</p>
+				</div>
+				<div id="footer">Página 19</div>
+			
+		</div>
+		<div class="hojavertical">
+		
+				<div id="header"></div>
+				<br>
+				<div id="contenido">
+				<p>
+				<h2></h2>
+				<b>Potion of Heroism.</b> For 1 hour after drinking it, you gain 10 temporary hit points that last for 1 hour. For the same duration, you are under the effect of the bless spell (no concentration required). This blue potion bubbles and steams as if boiling.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Invulnerability.</b> For 1 minute after you drink this potion, you have Resistance to all damage. The potion's syrupy liquid looks like liquefied iron.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Mind Reading.</b> When you drink this potion, you gain the effect of the detect thoughts spell (save DC 13). The potion’s dense, purple liquid has an ovoid cloud of pink floating in it.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Fire Giant Strength.</b>  Same as Potion of Fill Giant Strength but 25 of Strenght. This potion's transparent liquid has floating in it a sliver of fingernail from a fire giant.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Invisibility.</b> This potion’s container looks empty but feels as though it holds liquid. When you drink it, you become invisible for 1 hour. Anything you wear or carry is invisible with you. The effect ends early if you attack or cast a spell.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Speed.</b> When you drink this potion, you gain the effect of the haste spell for 1 minute (no concentration required). The potion’s yellow fluid is streaked with black and swirls on its own.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Flying.</b> When you drink this potion, you gain a flying speed equal to your walking speed for 1 hour and can hover. If you’re in the air when the potion wears off, you fall unless you have some other means of staying aloft. This potion’s clear liquid floats at the top of its container and has cloudy white impurities drifting in it.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Cloud Giant Strength.</b>  Same as Potion of Fill Giant Strength but 27 of Strenght. This potion's transparent liquid has floating in it a sliver of fingernail from a cloud giant.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Longevity.</b> When you drink this potion, your physical age is reduced by 1d6 + 6 years, to a minimum of 13 years. Each time you subsequently drink a potion of longevity, there is 10 percent cumulative chance that you instead age by 1d6 + 6 years. Suspended in this amber liquid are a scorpion's tail, an adder's fang, a dead spider, and a tiny heart that, against all reason, is still beating. These ingredients vanish when the potion is opened.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Storm Giant Strength.</b>  Same as Potion of Fill Giant Strength but 29 of Strenght. This potion's transparent liquid has floating in it a sliver of fingernail from a storm giant.
+				</p>
+				</div>
+				<div id="footer">Página 20</div>
+			
+		</div>
+		<div class="hojavertical">
+		
+				<div id="header"></div>
+				<br>
+				<div id="contenido">
+				<p>
+				<h2>POISONER'S KIT</h2>
+				<b>Oil of Slipperiness.</b> This sticky black unguent is thick and heavy in the container, but it flows quickly when poured. The oil can cover a Medium or smaller creature, along with the equipment it’s wearing and carrying (one additional vial is required for each size category above Medium). Applying the oil takes 10 minutes. The affected creature then gains the effect of a freedom of movement spell for 8 hours.
+				<br>
+				<br>
+				Alternatively, the oil can be poured on the ground as an action, where it covers a 10-foot square, duplicating the effect of the grease spell in that area for 8 hours.
+				<br>
+				<br>
+				<br>
+				<b>Dust of Disappearance.</b> Found in a small packet, this powder resembles very fine sand. There is enough of it for one use. When you use an action to throw the dust into the air, you and each creature and object within 10 feet of you become Invisible for 2d4 minutes. The Duration is the same for all subjects, and the dust is consumed when its magic takes effect. If a creature affected by the dust attacks or casts a spell, the Invisibility ends for that creature.
+				<br>
+				<br>
+				<br>
+				<b>Dust of Dryness.</b> This small packet contains 1d6 + 4 pinches of dust. You can use an action to sprinkle a pinch of it over water. The dust turns a cube of water 15 feet on a side into one marble-sized pellet, which floats or rests near where the dust was sprinkled. The pellet's weight is negligible.
+				<br>
+				<br>
+				Someone can use an action to smash the pellet against a hard surface, causing the pellet to Shatter and release the water the dust absorbed. Doing so ends that pellet's magic.
+				<br>
+				<br>
+				An elemental composed mostly of water that is exposed to a pinch of the dust must make a DC 13 Constitution saving throw, taking 10d6 necrotic damage on a failed save, or half as much damage on a successful one.
+				<br>
+				<br>
+				<br>
+				<b>Dust of Sneezing and Chocking.</b> It appears to be dust of disappearance, and an identify spell reveals it to be such. There is enough of it for one use. When you use an action to throw a handful of the dust into the air, you and each creature that needs to breathe within 30 feet of you must succeed on a DC 15 Constitution saving throw or become unable to breathe, while sneezing uncontrollably. A creature affected in this way is incapacitated and suffocating. As long as it is conscious, a creature can repeat the saving throw at the end of each of its turns, ending the effect on it on a success. The lesser restoration spell can also end the effect on a creature.
+				<br>
+				<br>
+				<br>
+				<b>Potion of Poison.</b> This concoction looks, smells, and tastes like a potion of healing or other beneficial potion. However, it is actually poison masked by illusion magic. An identify spell reveals its true nature. If you drink it, you take 3d6 poison damage, and you must succeed on a DC 13 Constitution saving throw or be poisoned. At the start of each of your turns while you are poisoned in this way, you take 3d6 poison damage. At the end of each of your turns, you can repeat the saving throw. On a successful save, the poison damage you take on your subsequent turns decreases by 1d6. The poison ends when the damage decreases to 0.
+				<br>
+				<br>
+				<br>
+				<b>Assasin's Blood.</b> A creature subjected to this poison must make a DC 10 Constitution saving throw. On a failed save, it takes 6 (1d12) poison damage and is Poisoned for 24 hours. On a successful save, the creature takes half damage and isn’t Poisoned.		
+				</p>
+				</div>
+				<div id="footer">Página 21</div>
+			
+		</div>
+		<div class="hojavertical">
+				
+				<div id="header"></div>
+				<br>
+				<div id="contenido">
+				<p>
+				<h2></h2>
+				<br>
+				<b>Truth Serum.</b> A creature subjected to this poison must succeed on a DC 11 Constitution saving throw or become Poisoned for 1 hour. The Poisoned creature can’t knowingly speak a lie, as if under the effect of a Zone of Truth spell.
+				<br>
+				<br>
+				<br>
+				<b>Crawler Mucus.</b> This poison must be harvested from a dead or Incapacitated crawler. A creature subjected to this poison must succeed on a DC 13 Constitution saving throw or be Poisoned for 1 minute. The Poisoned creature is Paralyzed. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+				<br>
+				<br>
+				<br>
+				<b>Drow Poison.</b> This poison is typically made only by the drow, and only in a place far removed from sunlight. A creature subjected to this poison must succeed on a DC 13 Constitution saving throw or be Poisoned for 1 hour. If the saving throw fails by 5 or more, the creature is also Unconscious while Poisoned in this way. The creature wakes up if it takes damage or if another creature takes an action to shake it awake.
+				<br>
+				<br>
+				<br>
+				<b>Serpent Venom.</b> This poison must be harvested from a dead or Incapacitated Giant Poisonous Snake. A creature subjected to this poison must succeed on a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one.
+				<br>
+				<br>
+				<br>
+				<b>Malice.</b> A creature subjected to this poison must succeed on a DC 15 Constitution saving throw or become Poisoned for 1 hour. The Poisoned creature is Blinded.
+				<br>
+				<br>
+				<br>
+				<b>Pale Tincture.</b> A creature subjected to this poison must succeed on a DC 16 Constitution saving throw or take 3 (1d6) poison damage and become Poisoned. The Poisoned creature must repeat the saving throw every 24 hours, taking 3 (1d6) poison damage on a failed save. Until this poison ends, the damage the poison deals can’t be healed by any means. After seven successful Saving Throws, the effect ends and the creature can heal normally.
+				<br>
+				<br>
+				<br>
+				<b>Essence of Ether.</b> A creature subjected to this poison must succeed on a DC 15 Constitution saving throw or become Poisoned for 8 hours. The Poisoned creature is Unconscious. The creature wakes up if it takes damage or if another creature takes an action to shake it awake.
+				<br>
+				<br>
+				<br>
+				<b>Oil of Etherealness.</b> Beads of this cloudy gray oil form on the outside of its container and quickly evaporate. The oil can cover a Medium or smaller creature, along with the equipment it’s wearing and carrying (one additional vial is required for each size category above Medium). Applying the oil takes 10 minutes. The affected creature then gains the effect of the etherealness spell for 1 hour.
+				<br>
+				<br>
+				<br>
+				<b>Oil of Taggit.</b> A creature subjected to this poison must succeed on a DC 13 Constitution saving throw or become Poisoned for 24 hours. The Poisoned creature is Unconscious. The creature wakes up if it takes damage.
+				</p>
+				</div>
+				<div id="footer">Página 22</div>
+			
+		</div>
+		<div class="hojavertical">
+				
+				<div id="header"></div>
+				<br>
+				<div id="contenido">
+				<p>
+				<h2></h2>
+				<br>
+				<b>Burn ether Fumes.</b> A creature subjected to this poison must succeed on a DC 13 Constitution saving throw or take 10 (3d6) poison damage, and must repeat the saving throw at the start of each of its turns. On each successive failed save, the character takes 3 (1d6) poison damage. After three successful saves, the poison ends.
+				<br>
+				<br>
+				<br>
+				<b>Torport.</b> A creature subjected to this poison must succeed on a DC 15 Constitution saving throw or become Poisoned for 4d6 hours. The Poisoned creature is Incapacitated.
+				<br>
+				<br>
+				<br>
+				<b>Wyvern Poison.</b> This poison must be harvested from a dead or Incapacitated Wyvern. A creature subjected to this poison must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one.
+				<br>
+				<br>
+				<br>
+				<b>Midnight Tears.</b> A creature that ingests this poison suffers no effect until the stroke of midnight. If the poison has not been neutralized before then, the creature must succeed on a DC 17 Constitution saving throw, taking 31 (9d6) poison damage on a failed save, or half as much damage on a successful one.
+				<br>
+				<br>
+				<br>
+				<b>Purple Worm Poison.</b> This poison must be harvested from a dead or Incapacitated Purple Worm. A creature subjected to this poison must make a DC 19 Constitution saving throw, taking 42 (12d6) poison damage on a failed save, or half as much damage on a successful one.
+				<br>
+				<br>
+				<br>
+				<b>Oil of Sharpness.</b> This clear, gelatinous oil sparkles with tiny, ultrathin silver shards. The oil can coat one <img src="sword.png"> or <img src="arrow.png"> weapon or up to 5 pieces of <img src="sword.png"> or <img src="arrow.png"> ammunition. Applying the oil takes 1 minute. For 1 hour, the coated item is magical and has a +3 bonus to attack and damage rolls.
+				</p>
+				</div>
+				<div id="footer">Página 23</div>
+			
+		</div>
+		
+		<div class="hojavertical">
+		
+			<div id="header"><a id="Injuries">INJURIES</a></div>
+			<br>
+			<br>
+			<br>
+		 
+			<div id="contenido2">
+				<p>
+				<h2>HARSHER DAMAGE <mark>(optional)</mark></h2>
+				When you fall <b>unconscious</b> while receiving <b>half your hp or more from a single hit</b> you must pass a <b>Cons Save DC15</b> or roll in the Lingering Injuries table. In addition if that hit <b>deals your max hp or more you automatically fail your Cons Save.</b>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h3><span style="color: #A4A6A3;">PIERCING INJURY</span></h3>
+				<table class="Injurytable" style="font-size: 14px;">
+					<tr><th id="injuryth" style="background-color: #A4A6A3;">Roll</th><th class="injuryth2" style="background-color: #A4A6A3;text-align: center;"> Piercing Injury</th></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>1</b></td><td class="injuryth2"><b>Lose an Eye.</b> You have disadvantage on Wisdom (Perception) checks that rely on sight and on ranged attack rolls. Magic such as the regenerate spell can restore the lost eye. If you have no eyes left after sustaining this injury, you're blinded.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>2</b></td><td class="injuryth2"><b>Throat Injury.</b> You gain a level of exhaustion which cannot be removed by normal means. You also have disadvantage on constitution checks. Magic such as the regenerate spell can heal your throat injury.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>3</b></td><td class="injuryth2"><b>Groin Injury.</b> Your speed on foot is halved, and you must use a cane or crutch to move. You cannot take the Dash action. You are also sterile. Magic such as the regenerate spell can heal the groin injury.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>4</b></td><td class="injuryth2"><b>Cardiac Injury.</b> You gain a level of exhaustion which cannot be removed by normal means. If you fail a saving throw against fear or fear effects, you gain another level of exhaustion that can be removed by normal means. Magic such as the regenerate spell can heal your cardiac damage.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>5-7</b></td><td class="injuryth2"><b>Organ Damage.</b> Whenever you attempt an action in combat, you must make a DC 15 Constitution saving throw. On a failed save, you lose your action and can't use reactions until the start of your next turn. Magic such as the regenerate spell can cure your organ damage. Alternatively, someone can tend to the organ damage and make a DC 15 Wisdom (Medicine) check once every day. After three successes, the organ damage is resolved.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>8-10</b></td><td class="injuryth2"><b>Pierced Stomach.</b> When you complete a long rest, you must succeed at a Constitution saving throw DC 10 or gain the poisoned condition until you complete a long rest. Magical healing of 6th level or higher, such as heal or regenerate, heals the pierced stomach, or if you spend a week doing nothing but resting, it heals on its own.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>11-13</b></td><td class="injuryth2"><b>Horrible Scar.</b> You are disfigured to the extent that the wound can't be easily concealed . You have disadvantage on Charisma (Persuasion) checks and advantage on Charisma (Intimidation) checks. Magical healing of 6th level or higher, such as heal and regenerate, removes the scar.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>14-16</b></td><td class="injuryth2"><b>Festering Wound.</b> Your hit point maximum is reduced by 1 every 24 hours the wound persists. If your hit point maximum drops to 0, you die. The wound heals if you receive any magical healing. Alternatively, someone can tend to the wound and make a DC 15 Wisdom (Medicine) check once every 24 hours. After seven successes, the wound heals.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>17-20</b></td><td class="injuryth2"><b>Minor Scar.</b> The scar doesn't have any adverse effect. Magical healing of 6th level or higher, such as heal and regenerate, removes the scar.</td></tr>
+				</table>
+
+				</p>
+			</div>
+					
+			<div id="footer">Página 24</div>
+			
+			</div>
+	
+			<div class="hojavertical">
+		 
+			<div id="contenido3">
+				<p>
+
+				<h3><span style="color: #A4A6A3;">BLUDGEONING INJURY</span></h3>
+				<table class="Injurytable">
+					<tr><th id="injuryth" style="background-color: #A4A6A3;">Roll</th><th class="injuryth2" style="background-color: #A4A6A3;text-align: center;"> Bludgeoning Injury</th></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>1</b></td><td class="injuryth2"><b>Brain Injury.</b> You have <b>disadvantage</b> on Intelligence, Wisdom, and Charisma checks, as well as Intelligence, Wisdom, and Charisma saving throws. If you fail a saving throw against <img src="hammer.png"> damage, force damage, or psychic damage, you are also <b>stunned until the end of your next turn.</b> Magic such as the <b>regenerate spell</b> can restore your full brain function.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>2</b></td><td class="injuryth2"><b>Broken leg.</b> Your speed on foot is halved, and you must use a <b>cane or crutch to move.</b> You fall prone after using the Dash action. You have <b>disadvantage on Dexterity checks</b> made to balance. If your leg is splinted with a successful <b>DC 15 Wisdom (Medicine) check,</b> then it will heal naturally in three weeks. If it is not splinted before within a week, the effects remain until the leg is rebroken and splinted. Magical healing of 6th level or higher, such as heal or regenerate, mends the broken leg.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>3</b></td><td class="injuryth2"><b>Broken arm.</b> You can no longer hold anything with two hands, and you can hold only a single object at a time. If your arm is splinted with a successful <b>DC 15 Wisdom (Medicine) check,</b> then it will heal naturally in 3 weeks. If it is not splinted before within a week, the effects remain until the arm is rebroken and splinted. Magical healing of 6th level or higher, such as <b>heal or regenerate,</b> mends the broken arm.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>4</b></td><td class="injuryth2"><b>Internal Injury.</b> Whenever you attempt an action in combat, you must make a <b>DC 15 Constitution saving throw.</b> On a failed save, you lose your action and can't use reactions until the start of your next turn. Magical healing of 6th level or higher, such as <b>heal or regenerate,</b> repair the injury, or if you spend a week doing nothing but resting, it will heal naturally.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>5-7</b></td><td class="injuryth2"><b>Broken Ribs.</b> This has the same effect as Internal Injury above, except that the <b>save DC is 10.</b></td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>8-10</b></td><td class="injuryth2"><b>Major Concussion.</b> You have <b>disadvantage</b> on Intelligence checks, Wisdom checks, and Charisma checks, as well as Constitution saving throws to maintain concentration. Magical healing of 6th level or higher, such as <b>heal or regenerate,</b> cures the concussion. Alternatively, it heals on its own in a week.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>11-13</b></td><td class="injuryth2"><b>Minor Concussion.</b> You have <b>disadvantage on Intelligence checks.</b> The concussion heals if you receive <b>any magical healing;</b> alternatively, it heals on its own in three days. If you already have a minor concussion, you suffer a major concussion.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>14-16</b></td><td class="injuryth2"><b>Severe bruising.</b> You suffer severe bruising over an extensive portion of your anatomy. Anytime you <b>suffer <img src="hammer.png"> or force damage,</b> you suffer an additional point of <img src="hammer.png"> or force damage. The bruising heals if you receive <b> any magical healing.</b> Alternatively, it heals on its own in 3 days.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>17-20</b></td><td class="injuryth2"><b>Broken Nose.</b> Your broken nose is painful but doesn't have any adverse effect. <b>Any magical healing</b> mends your nose, although it may heal crooked if it is crooked when the healing is applied.</td></tr>
+				</table>
+				
+				<br>
+				<br>
+				<br>
+				
+				<h3><span style="color: #A4A6A3;">SLASHING INJURY</span></h3>
+				<table class="Injurytable">
+					<tr><th id="injuryth" style="background-color: #A4A6A3;">Roll</th><th class="injuryth2" style="background-color: #A4A6A3;text-align: center;"> Slashing Injury</th></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>1</b></td><td class="injuryth2"><b>Lose an Eye.</b> You have disadvantage on Wisdom (Perception) checks that rely on sight and on ranged attack rolls. Magic such as the regenerate spell can restore the lost eye. If you have no eyes left after sustaining this injury, you're blinded.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>2</b></td><td class="injuryth2"><b>Lose an Arm or a Hand.</b> You can no longer hold anything with two hands, and you can hold only a single object at a time. Magic such as the regenerate spell can restore the lost appendage.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>3</b></td><td class="injuryth2"><b>Lose a Foot or Leg.</b> Your speed on foot is halved, and you must use a cane or crutch to move unless you have a peg leg or other prosthesis. You fall prone after using the Dash action. You have disadvantage on Dexterity checks made to balance. Magic such as the regenerate spell can restore the lost appendage.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>4</b></td><td class="injuryth2"><b>Hamstrung.</b> Your speed on foot is reduced by 5 feet. You must make a DC 10 Dexterity saving throw after using the Dash action. If you fail the save, you fall prone. Magic such as the regenerate spell can cure your severed hamstring tendons.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>5-7</b></td><td class="injuryth2"><b>Major Internal Injury.</b> Whenever you attempt an action in combat, you must make a DC 15 Constitution saving throw. On a failed save, you lose your action and can't use reactions until the start of your next turn. Magical healing of 6th level or higher, such as heal or regenerate, heals the internal injury; alternatively, if you spend ten days doing nothing but resting, it heals on its own.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>8-10</b></td><td class="injuryth2"><b>Minor Internal Injury.</b> This has the same effect as Major Internal Injury above, except that the save DC is 10.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>11-13</b></td><td class="injuryth2"><b>Horrible Scar.</b> You are disfigured to the extent that the wound can't be easily concealed. You have disadvantage on Charisma (Persuasion) checks and advantage on Charisma (Intimidation) checks. Magical healing of 6th level or higher, such as heal or regenerate, removes the scar.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>14-16</b></td><td class="injuryth2"><b>Festering Wound.</b> Your hit point maximum is reduced by 1 every 24 hours the wound persists. If your hit point maximum drops to 0, you die. The wound heals if you receive magical healing. Alternatively, someone can tend to the wound and make a DC 15 Wisdom (Medicine) check once every 24 hours. After seven successes, the wound heals.</td></tr>
+					<tr><td id="injuryth" style="background-color: #A4A6A3;"><b>17-20</b></td><td class="injuryth2"><b>Minor Scar.</b> The scar doesn't have any adverse effect. Magical healing of 6th level or higher, such as heal or regenerate, removes the scar.</td></tr>
+				</table>
+
+				</p>
+			</div>
+					
+			<div id="footer">Página 25</div>
+			
+			</div>
+			
+			<div class="hojavertical">
+		 
+			<div id="contenido3">
+				<p>
+
+				<h3><span style="color: #F73906;">FIRE INJURY</span></h3>
+				<table class="Injurytable">
+					<tr><th id="injuryth" style="background-color: #F73906;">Roll</th><th class="injuryth2" style="background-color: #F73906;text-align: center;"> Fire Injury</th></tr>
+					<tr><td id="injuryth" style="background-color: #F73906;"><b>1</b></td><td class="injuryth2"><b>Lose an Eye.</b> You have disadvantage on Wisdom (Perception) checks that rely on sight and on ranged attack rolls. Magic such as the regenerate spell can restore the lost eye. If you have no eyes left after sustaining this injury, you're blinded.</td></tr>
+					<tr><td id="injuryth" style="background-color: #F73906;"><b>2</b></td><td class="injuryth2"><b>Fourth Degree Burns.</b> You have disadvantage on ability checks and Strength, Dexterity, and Constitution saving throws. If you fail a saving throw against an effect that causes fire damage, you also gain the stunned condition until the end of your next turn. Magic such as the regenerate spell cures this damage. If you already have fourth degree burns, you must succeed at a DC 15 Constitution saving throw or die.</td></tr>
+					<tr><td id="injuryth" style="background-color: #F73906;"><b>3</b></td><td class="injuryth2"><b>Third Degree Burns.</b> You have disadvantage on ability checks and Constitution saving throws. If you fail a saving throw against an effect that causes fire damage, you also gain the stunned condition until the end of your next turn. Magic such as the regenerate spell cures this damage. Alternatively, someone can tend to the burns and make a DC 15 Wisdom (Medicine) check once every week. After ten successes, the burns heal. If you already have third degree burns, you instead suffer fourth degree burns.</td></tr>
+					<tr><td id="injuryth" style="background-color: #F73906;"><b>4</b></td><td class="injuryth2"><b>Second Degree Burns.</b> You have disadvantage on Strength, Dexterity, and Constitution checks. Magic such as the regenerate spell cures this damage. Alternatively, they will heal on their own in 4 weeks. If you already have second degree burns, you instead suffer third degree burns.</td></tr>
+					<tr><td id="injuryth" style="background-color: #F73906;"><b>5-7</b></td><td class="injuryth2"><b>Major Neuralgia.</b> You have constant, painful nerve damage over a large portion of your body. Whenever you attempt an action in combat, you must make a DC 15 Constitution saving throw. On a failed save, you lose your action and can't use reactions until the start of your next turn. Magical healing of 6th level or higher, such as heal or regenerate, cures the neuralgia, or if you spend two weeks doing nothing but resting, it resolves on its own.</td></tr>
+					<tr><td id="injuryth" style="background-color: #F73906;"><b>8-10</b></td><td class="injuryth2"><b>Minor Neuralgia.</b> This has the same effect as Major Neuralgia above, except that the save DC is 10, and it will resolve on its own in a week.</td></tr>
+					<tr><td id="injuryth" style="background-color: #F73906;"><b>11-13</b></td><td class="injuryth2"><b>Horrible Disfigurement.</b> You have burn scars to the extent that they can't be easily concealed. You have disadvantage on Charisma (Persuasion) checks and advantage on Charisma (Intimidation) checks. Magical healing of 6th level or higher, such as heal or regenerate, removes the burn scars.</td></tr>
+					<tr><td id="injuryth" style="background-color: #F73906;"><b>14-16</b></td><td class="injuryth2"><b>Blisters.</b> You have severe blisters. You have disadvantage on Dexterity checks. The blisters heal if you receive magical healing. Alternatively, someone can tend to the blisters and make a DC 15 Wisdom (Medicine) check once every 24 hours. After three successes, the blisters heal.</td></tr>
+					<tr><td id="injuryth" style="background-color: #F73906;"><b>17-20</b></td><td class="injuryth2"><b>First Degree Burns.</b> You have superficial but painful burns. Whenever you take fire damage, you take an additional 1 point of damage. Magical healing cures the burns; alternatively, they will heal on their own in 4 days. If you already have first degree burns, you instead suffer second degree burns.</td></tr>
+				</table>
+				
+				<br>
+				<br>
+				
+				<h3><span style="color: #928AFF;">COLD INJURY</span></h3>
+				<table class="Injurytable">
+					<tr><th id="injuryth" style="background-color: #928AFF;">Roll</th><th class="injuryth2" style="background-color: #928AFF;text-align: center;"> Cold Injury</th></tr>
+					<tr><td id="injuryth" style="background-color: #928AFF;"><b>1</b></td><td class="injuryth2"><b>Ocular Damage.</b> One of your corneas is damaged from frostbite. You have disadvantage on Wisdom (Perception) checks that rely on sight and on ranged attack rolls. Magic such as the regenerate spell can restore the damaged cornea. If you have no corneas that remain undamaged after sustaining this injury, you're blinded.</td></tr>
+					<tr><td id="injuryth" style="background-color: #928AFF;"><b>2</b></td><td class="injuryth2"><b>Systemic Damage from Frostbite.</b> You have disadvantage on Strength, Dexterity, and Constitution ability checks and Strength, Dexterity, and Constitution saving throws. Magic such as the regenerate spell cures this damage.</td></tr>
+					<tr><td id="injuryth" style="background-color: #928AFF;"><b>3</b></td><td class="injuryth2"><b>Gangrene of the Hand.</b> You can no longer hold anything with two hands, and you can hold only a single object at a time. Magic such as the regenerate spell can restore the damaged appendage.</td></tr>
+					<tr><td id="injuryth" style="background-color: #928AFF;"><b>4</b></td><td class="injuryth2"><b>Gangrene of the Foot.</b> Your speed on foot is halved, and you must use a cane or crutch to move. You fall prone after using the Dash action. You have disadvantage on Dexterity checks made to balance. Magic such as the regenerate spell can restore the damaged appendage.</td></tr>
+					<tr><td id="injuryth" style="background-color: #928AFF;"><b>5-7</b></td><td class="injuryth2"><b>Major Neuralgia.</b> You have constant, painful nerve damage over a large portion of your body. Whenever you attempt an action in combat, you must make a DC 15 Constitution saving throw. On a failed save, you lose your action and can't use reactions until the start of your next turn. Magical healing of 6th level or higher, such as heal or regenerate, cures the neuralgia, or if you spend two weeks doing nothing but resting it resolves on its own.</td></tr>
+					<tr><td id="injuryth" style="background-color: #928AFF;"><b>8-10</b></td><td class="injuryth2"><b>Frostbitten Foot.</b> Your speed on foot is reduced by 5 feet. You must make a DC 10 Dexterity saving throw after using the Dash action. If you fail the save, you fall prone. Magical healing cures the frostbite. Alternatively, your foot can be treated with a successful DC 15 Wisdom (Medicine) check, in which case it will heal naturally in a week.</td></tr>
+					<tr><td id="injuryth" style="background-color: #928AFF;"><b>11-13</b></td><td class="injuryth2"><b>Frostbitten hand.</b> Randomly determine which hand has been frostbitten. In order to grasp or manipulate an object with that hand, you must succeed at a DC 15 Dexterity check. Magical healing cures the frostbite. Alternatively, your hand can be treated with a successful DC 15 Wisdom (Medicine) check, in which case it will heal naturally in a week.</td></tr>
+					<tr><td id="injuryth" style="background-color: #928AFF;"><b>14-16</b></td><td class="injuryth2"><b>Minor Neuralgia.</b> This has the same effect as Major Neuralgia above, except that the save DC is 10 and it only takes a week to resolve on its own.</td></tr>
+					<tr><td id="injuryth" style="background-color: #928AFF;"><b>17-20</b></td><td class="injuryth2"><b>Anosmia.</b> You lose your sense of smell and taste. You automatically fail any ability checks that involve your sense of smell or taste. The condition heals if you receive any magical healing.</td></tr>
+				</table>
+				
+				</p>
+			</div>
+					
+			<div id="footer">Página 26</div>
+			
+			</div>
+			
+			<div class="hojavertical">
+		 
+			<div id="contenido3">
+				<p>
+
+				<h3><span style="color: #FFFFFF;">RADIANT INJURY</span></h3>
+				<table class="Injurytable">
+					<tr><th id="injuryth" style="background-color: #FFFFFF;">Roll</th><th class="injuryth2" style="background-color: #FFFFFF;text-align: center;"> Radiant Injury</th></tr>
+					<tr><td id="injuryth" style="background-color: #FFFFFF;"><b>1</b></td><td class="injuryth2"><b>Blindness.</b> Your eyes are destroyed; you gain the blinded condition. Magic such as the regenerate spell can restore your sight.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FFFFFF;"><b>2</b></td><td class="injuryth2"><b>Partial Blindness.</b> Your retinas are damaged; you have disadvantage on Wisdom (Perception) checks that rely on sight and on ranged attack rolls. Magic such as the regenerate spell can restore the lost eye. If you have already suffered partial blindness, you're blinded.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FFFFFF;"><b>3</b></td><td class="injuryth2"><b>Third Degree Burns.</b> You have disadvantage on ability checks and Constitution saving throws. If you fail a saving throw against an effect that causes fire damage, you also gain the stunned condition until the end of your next turn. Magic such as the regenerate spell cures this damage. Alternatively, someone can tend to the burns and make a DC 15 Wisdom (Medicine) check once every day. After seven successes, the burns heal. If you already have third degree burns, you instead suffer fourth degree burns as per the Fire chart.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FFFFFF;"><b>4</b></td><td class="injuryth2"><b>Second Degree Burns.</b> You have disadvantage on Strength, Dexterity, and Constitution checks. Magic such as the regenerate spell cures this damage. Alternatively, they will heal on their own in a week. If you already have second degree burns, you instead suffer third degree burns.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FFFFFF;"><b>5-7</b></td><td class="injuryth2"><b>Large Skin Tumours.</b> You have disadvantage on Charisma and Wisdom checks. Magic such as the regenerate spell cures your large skin tumors. If your large skin tumors are not cured within a month, you develop Systemic Damage as per the poison table.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FFFFFF;"><b>8-10</b></td><td class="injuryth2"><b>Small Skin Tumors.</b> You have disadvantage on Charisma checks. Magic such as the regenerate spell cures your small skin tumors. If your small skin tumors are not cured within a month, you develop Large Skin Tumors.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FFFFFF;"><b>11-13</b></td><td class="injuryth2"><b>Blisters.</b> You have disadvantage on Dexterity checks. The blisters heal if you receive magical healing. Alternatively, someone can tend to the blisters and make a DC 15 Wisdom (Medicine) check once every 24 hours. After three successes, the blisters heal.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FFFFFF;"><b>14-16</b></td><td class="injuryth2"><b>First Degree Burns.</b> You have superficial but painful burns. Whenever you take fire damage, you take an additional 1 point of damage. Magical healing cures the burns; alternatively, they will heal on their own a week. If you already have first degree burns, you instead suffer second degree burns.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FFFFFF;"><b>17-20</b></td><td class="injuryth2"><b>Minor nausea.</b> You must succeed at a DC 10 Constitution saving throw before you can consume food. Magical healing cures your nausea. Alternatively, it will resolve on its own in a week.</td></tr>
+				</table>
+				
+				<br>
+				<br>
+				<br>
+				
+				<h3>NECROTIC INJURY</h3>
+				<table class="Injurytable">
+					<tr><th id="injuryth" style="background-color: #000001; color: white;">Roll</th><th class="injuryth2" style="background-color: #000001;text-align: center; color: white;"> Necrotic Injury</th></tr>
+					<tr><td id="injuryth" style="background-color: #000001; color: white;"><b>1</b></td><td class="injuryth2"><b>Spiritual Injury.</b> You are afflicted with intense apathy and depression. You have disadvantage on Intelligence, Wisdom, and Charisma ability checks and Intelligence, Wisdom, and Charisma saving throws. Magic such as the heal or regenerate spell can resolve your spiritual injury, but such spells must be cast by a cleric, druid, or other class that uses divine magic.</td></tr>
+					<tr><td id="injuryth" style="background-color: #000001; color: white;"><b>2</b></td><td class="injuryth2"><b>Withered Hand.</b> You lose a hand. You can no longer hold anything with two hands, and you can hold only a single object at a time. Magic such as the regenerate spell can restore the lost appendage.</td></tr>
+					<tr><td id="injuryth" style="background-color: #000001; color: white;"><b>3</b></td><td class="injuryth2"><b>Withered Foot.</b> Your speed on foot is halved, and you must use a cane or crutch to move. You fall prone after using the Dash action. You have disadvantage on Dexterity checks made to balance. Magic such as the regenerate spell can restore the lost appendage.</td></tr>
+					<tr><td id="injuryth" style="background-color: #000001; color: white;"><b>4</b></td><td class="injuryth2"><b>Major Organ Necrosis.</b> Whenever you attempt an action in combat, you must make a DC 15 Constitution saving throw. On a failed save, you lose your action and can't use reactions until the start of your next turn. Magical healing of 6th level or higher, such as heal or regenerate, cures the Major Organ Necrosis.</td></tr>
+					<tr><td id="injuryth" style="background-color: #000001; color: white;"><b>5-7</b></td><td class="injuryth2"><b>Minor Organ Necrosis.</b> This has the same effect as Major Organ Necrosis above, except that the save DC is 10.</td></tr>
+					<tr><td id="injuryth" style="background-color: #000001; color: white;"><b>8-10</b></td><td class="injuryth2"><b>Necrotic Stench.</b> You smell like rotting flesh. You have disadvantage on Charisma (Persuasion) checks. Magical healing of 6th level or higher, such as heal or regenerate, removes the smell.</td></tr>
+					<tr><td id="injuryth" style="background-color: #000001; color: white;"><b>11-13</b></td><td class="injuryth2"><b>Necrotising Wound.</b> Your hit point maximum is reduced by 1 every 24 hours the wound persists. If your hit point maximum drops to 0, you die. The wound heals if you receive magical healing. Alternatively, someone can tend to the wound and make a DC 15 Wisdom (Medicine) check once every 24 hours. After seven successes, the wound heals.</td></tr>
+					<tr><td id="injuryth" style="background-color: #000001; color: white;"><b>14-16</b></td><td class="injuryth2"><b>Inflammation.</b> You have disadvantage on strength checks. Magical healing resolves the inflammation. Alternatively, it will resolve on its own in a week.</td></tr>
+					<tr><td id="injuryth" style="background-color: #000001; color: white;"><b>17-20</b></td><td class="injuryth2"><b>Necrotic Discoloration.</b> You get white and grey spots on your cheeks. The spots don't have any adverse effect. Magical healing of 6th level or higher, such as heal or regenerate, removes the spots.</td></tr>
+				</table>
+
+				</p>
+			</div>
+					
+			<div id="footer">Página 27</div>
+			
+			</div>
+			
+			<div class="hojavertical">
+		 
+			<div id="contenido3">
+				<p>
+
+				<h3><span style="color: #FFEF3C;">LIGHTNING INJURY</span></h3>
+				<table class="Injurytable">
+					<tr><th id="injuryth" style="background-color: #FFEF3C;">Roll</th><th class="injuryth2" style="background-color: #FFEF3C;text-align: center;"> Lightning Injury</th></tr>
+					<tr><td id="injuryth" style="background-color: #FFEF3C;"><b>1</b></td><td class="injuryth2"><b>Brain Injury.</b> You have suffered a brain injury. You have disadvantage on Intelligence, Wisdom, and Charisma checks, as well as Intelligence, Wisdom, and Charisma saving throws. If you fail a saving throw against <img src="hammer.png"> damage, force damage, or psychic damage, you are also stunned until the end of your next turn. Magic such as the regenerate spell can restore your full brain function.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FFEF3C;"><b>2</b></td><td class="injuryth2"><b>Explosive Grounding of the Hand.</b> You lose a hand. You can no longer hold anything with two hands, and you can hold only a single object at a time. Magic such as the regenerate spell can restore the lost appendage.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FFEF3C;"><b>3</b></td><td class="injuryth2"><b>Explosive Grounding of the Foot.</b> You lose a foot. Your speed on foot is halved, and you must use a cane or crutch to move unless you have a peg leg or other prosthesis. You fall prone after using the Dash action. You have disadvantage on Dexterity checks made to balance. Magic such as the regenerate spell can restore the lost appendage.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FFEF3C;"><b>4</b></td><td class="injuryth2"><b>Kidney Failure.</b> When you complete a long rest, you must succeed at a Constitution saving throw of DC 15 or gain the poisoned condition until you complete a long rest. Magic such as the regenerate spell can cure your kidney failure. Alternatively, someone can tend to the kidney failure and make a DC 15 Wisdom (Medicine) check once every day. After three successes, the kidney failure is resolved.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FFEF3C;"><b>5-7</b></td><td class="injuryth2"><b>Arc Flash.</b> Roll on the fire table.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FFEF3C;"><b>8-10</b></td><td class="injuryth2"><b>Cardiac Injury.</b> You gain a level of exhaustion which cannot be removed by normal means. If you fail a saving throw against fear or fear effects, you gain another level of exhaustion that can be removed by normal means. Magic such as the regenerate spell can heal your cardiac damage.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FFEF3C;"><b>11-13</b></td><td class="injuryth2"><b>Skeletal Muscle Breakdown.</b> You have disadvantage on Strength checks and Strength saving throws. Magic such as the regenerate spell can cure your muscle breakdown. Alternatively, it will resolve on its own in a week.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FFEF3C;"><b>14-16</b></td><td class="injuryth2"><b>Muscle Spasms.</b> You have disadvantage on Dexterity checks. Magical healing cures your muscle spasms. Alternatively, they will resolve on their own in a week.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FFEF3C;"><b>17-20</b></td><td class="injuryth2"><b>Flash Burns.</b> You have superficial burns. You turn as red as a lobster, but otherwise suffer no mechanical effects. Magical healing cures your flash burns. Alternatively, they will heal on their own in 2 weeks.</td></tr>
+				</table>
+				
+				<br>
+				<br>
+				<br>
+				
+				<h3><span style="color: #1CBB06;">POISON INJURY</span></h3>
+				<table class="Injurytable">
+					<tr><th id="injuryth" style="background-color: #1CBB06;">Roll</th><th class="injuryth2" style="background-color: #1CBB06;text-align: center;"> Poison Injury</th></tr>
+					<tr><td id="injuryth" style="background-color: #1CBB06;"><b>1</b></td><td class="injuryth2"><b>Systemic Damage.</b> You have disadvantage on Strength, Dexterity, and Constitution ability checks and Strength, Dexterity, and Constitution saving throws. Magic such as the regenerate spell cures this damage.</td></tr>
+					<tr><td id="injuryth" style="background-color: #1CBB06;"><b>2</b></td><td class="injuryth2"><b>Major Liver Damage.</b> When you complete a long rest, you must succeed at a Constitution saving throw of DC 15 or gain the poisoned condition until you complete a long rest. Additionally, whenever you take poison damage, you take an additional 3 (1d6) poison damage. Anytime you drink alcohol or take another drug, you take 3 (1d6) poison damage. Magic such as the regenerate spell can cure your liver failure.</td></tr>
+					<tr><td id="injuryth" style="background-color: #1CBB06;"><b>3</b></td><td class="injuryth2"><b>Minor Liver Damage.</b> When you complete a long rest, you must succeed at a Constitution saving throw of DC 10 or gain the poisoned condition until you complete a long rest. Additionally, whenever you take poison damage, you take an additional 2 (1d4) poison damage. Anytime you drink alcohol or take another drug, you take 2 (1d4) poison damage. Magic such as the regenerate spell can cure your liver failure.</td></tr>
+					<tr><td id="injuryth" style="background-color: #1CBB06;"><b>4</b></td><td class="injuryth2"><b>Major Kidney Failure.</b> When you complete a long rest, you must succeed at a Constitution saving throw of DC 15 or gain the poisoned condition until you complete a long rest. Magic such as the regenerate spell can cure your kidney failure. Alternatively, someone can tend to the kidney failure and make a DC 15 Wisdom (Medicine) check once every day. After seven successes, the kidney failure is resolved.</td></tr>
+					<tr><td id="injuryth" style="background-color: #1CBB06;"><b>5-7</b></td><td class="injuryth2"><b>Minor Kidney Failure.</b> This has the same effect as Major Kidney Failure above, except that the save DC is 10 and only three Wisdom (Medicine) check successes are needed to resolve the Kidney Failure.</td></tr>
+					<tr><td id="injuryth" style="background-color: #1CBB06;"><b>8-10</b></td><td class="injuryth2"><b>Cardiac Injury.</b> You gain a level of exhaustion which cannot be removed by normal means. If you fail a saving throw against fear or fear effects, you gain another level of exhaustion that can be removed by normal means. Magic such as the regenerate spell can heal your cardiac damage.</td></tr>
+					<tr><td id="injuryth" style="background-color: #1CBB06;"><b>11-13</b></td><td class="injuryth2"><b>Vertigo.</b> You have disadvantage on Dexterity checks. Magic such as the regenerate spell can cure your vertigo. Alternatively, it will resolve on its own in 3 weeks.</td></tr>
+					<tr><td id="injuryth" style="background-color: #1CBB06;"><b>14-16</b></td><td class="injuryth2"><b>Nausea.</b> You have disadvantage on Constitution checks. Magical healing cures your nausea. Alternatively, it will resolve on its own in a week.</td></tr>
+					<tr><td id="injuryth" style="background-color: #1CBB06;"><b>17-20</b></td><td class="injuryth2"><b>Minor nausea.</b> You must succeed at a DC 10 Constitution saving throw before you can consume food. Magical healing cures your nausea. Alternatively, it will resolve on its own in 3 days.</td></tr>
+				</table>
+
+				</p>
+			</div>
+					
+			<div id="footer">Página 28</div>
+			
+			</div>
+			
+			<div class="hojavertical">
+		 
+			<div id="contenido3">
+				<p>
+				<h3><span style="color: #F0E997;">THUNDER INJURY</span></h3>
+				<table class="Injurytable">
+					<tr><th id="injuryth" style="background-color: #F0E997;">Roll</th><th class="injuryth2" style="background-color: #F0E997;text-align: center;"> Thunder Injury</th></tr>
+					<tr><td id="injuryth" style="background-color: #F0E997;"><b>1</b></td><td class="injuryth2"><b>Brain Injury.</b> You have disadvantage on Intelligence, Wisdom, and Charisma checks, as well as Intelligence, Wisdom, and Charisma saving throws. If you fail a saving throw against <img src="hammer.png"> damage, force damage, or psychic damage, you are also stunned until the end of your next turn. Magic such as the regenerate spell can restore your full brain functions.</td></tr>
+					<tr><td id="injuryth" style="background-color: #F0E997;"><b>2</b></td><td class="injuryth2"><b>Deafness.</b> Your eardrums have been destroyed; you gain the deafened condition. Magic such as the regenerate spell can restore your hearing.</td></tr>
+					<tr><td id="injuryth" style="background-color: #F0E997;"><b>3</b></td><td class="injuryth2"><b>Partial Deafness.</b> Your eardrums have been damaged; you are hard of hearing. You have disadvantage on any ability check that requires hearing. Magic such as the regenerate spell can restore your hearing.</td></tr>
+					<tr><td id="injuryth" style="background-color: #F0E997;"><b>4</b></td><td class="injuryth2"><b>Severe Headaches.</b> You have disadvantage on Wisdom checks and Wisdom saving throws. If you fail a saving throw against <img src="hammer.png"> damage, force damage, or psychic damage, you are also stunned until the end of your next turn. Magic such as the regenerate spell can cure your severe headaches.</td></tr>
+					<tr><td id="injuryth" style="background-color: #F0E997;"><b>5-7</b></td><td class="injuryth2"><b>Internal Injury.</b> Whenever you attempt an action in combat, you must make a DC 15 Constitution saving throw. On a failed save, you lose your action and can't use reactions until the start of your next turn. Magical healing of 6th level or higher, such as heal or regenerate, cures the internal injury, or if you spend ten days doing nothing but resting, it heals on its own.</td></tr>
+					<tr><td id="injuryth" style="background-color: #F0E997;"><b>8-10</b></td><td class="injuryth2"><b>Major Concussion.</b> You have disadvantage on Intelligence checks, Wisdom checks, and Charisma checks, as well as Constitution saving throws to maintain concentration. Magical healing of 6th level or higher, such as heal or regenerate, cures the concussion. Alternatively, it heals on its own in a week.</td></tr>
+					<tr><td id="injuryth" style="background-color: #F0E997;"><b>11-13</b></td><td class="injuryth2"><b>Minor Concussion.</b> You have disadvantage on Intelligence checks. The concussion heals if you receive any magical healing; alternatively, it heals on its own in three days. If you already have a minor concussion, you suffer a major concussion.</td></tr>
+					<tr><td id="injuryth" style="background-color: #F0E997;"><b>14-16</b></td><td class="injuryth2"><b>Minor headaches.</b> You have disadvantage on Wisdom checks. Magical healing of 6th level or higher, such as heal or regenerate, cures the headaches. Alternatively, they will resolve on their own in a week.</td></tr>
+					<tr><td id="injuryth" style="background-color: #F0E997;"><b>17-20</b></td><td class="injuryth2"><b>Severe bruising.</b> You suffer severe bruising over an extensive portion of your anatomy. Anytime you suffer <img src="hammer.png"> or force damage, you suffer an additional point of <img src="hammer.png"> or force damage. The bruising heals if you receive magical healing. Alternatively, it heals on its own in three days.</td></tr>
+				</table>
+				
+				<br>
+				<br>
+				<br>
+				
+				<h3><span style="color: #C5C535;">ACID INJURY</span></h3>
+				<table class="Injurytable">
+					<tr><th id="injuryth" style="background-color: #C5C535;">Roll</th><th class="injuryth2" style="background-color: #C5C535;text-align: center;"> Acid Injury</th></tr>
+					<tr><td id="injuryth" style="background-color: #C5C535;"><b>1</b></td><td class="injuryth2"><b>Blindness.</b> Your eyes are destroyed; you gain the <b>blinded condition.</b> Magic such as the <b>regenerate spell</b> can restore your sight.</td></tr>
+					<tr><td id="injuryth" style="background-color: #C5C535;"><b>2</b></td><td class="injuryth2"><b>Partial Blindness.</b> Your eyes are damaged; you have <b>disadvantage on Wisdom (Perception) checks</b> that rely on sight and on ranged attack rolls. Magic such as the <b>regenerate spell</b> can heal the damage to your eyes.</td></tr>
+					<tr><td id="injuryth" style="background-color: #C5C535;"><b>3</b></td><td class="injuryth2"><b>Destroyed Hand.</b> You can no longer hold anything with two hands, and you can hold only a single object at a time. Magic such as the <b>regenerate spell</b> can restore the lost appendage.</td></tr>
+					<tr><td id="injuryth" style="background-color: #C5C535;"><b>4</b></td><td class="injuryth2"><b>Destroyed Foot or Leg.</b> Your speed on foot is halved, and you must use a <b>crutch or cane to move.</b> You fall prone after using the Dash action. You have disadvantage on Dexterity checks made to balance. Magic such as the <b>regenerate spell</b> can restore the damaged appendage.</td></tr>
+					<tr><td id="injuryth" style="background-color: #C5C535;"><b>5-7</b></td><td class="injuryth2"><b>Major Neuralgia.</b> You are in constant pain from nerve damage. Whenever you attempt an action in combat, you must make a <b>DC 15 Constitution saving throw.</b> On a failed save, <b>you lose your action and can't use reactions</b> until the start of your next turn. Magical healing of 6th level or higher, such as <b>heal and regenerate,</b> cures the neuralgia, or if you spend a week doing nothing but resting it resolves on its own.</td></tr>
+					<tr><td id="injuryth" style="background-color: #C5C535;"><b>8-10</b></td><td class="injuryth2"><b>Minor Neuralgia.</b> This has the same effect as Major Neuralgia above, except that the save DC is 10, and it only takes three days to resolve on its own.</td></tr>
+					<tr><td id="injuryth" style="background-color: #C5C535;"><b>11-13</b></td><td class="injuryth2"><b>Horrible Disfigurement.</b> You have acid burns to the extent that the scars can't be easily concealed. You have <b>disadvantage on Charisma (Persuasion)</b> checks and <b>advantage on Charisma (Intimidation)</b> checks. Magical healing of 6th level or higher, such as <b>heal or regenerate,</b> remove the acid burn scar.</td></tr>
+					<tr><td id="injuryth" style="background-color: #C5C535;"><b>14-16</b></td><td class="injuryth2"><b>Blisters.</b> You have severe blisters. You have <b>disadvantage on Dexterity checks.</b> The blisters heal if you receive <b>magical healing.</b> Alternatively, someone can tend to the blisters and make a <b>DC 15 Wisdom (Medicine) check</b> once every 24 hours. After three successes, the blisters heal.</td></tr>
+					<tr><td id="injuryth" style="background-color: #C5C535;"><b>17-20</b></td><td class="injuryth2"><b>Minor Disfigurement.</b> You have acid burn scars, but they don’t have any adverse effect. Magical healing of 6th level or higher, such as <b>heal or regenerate,</b> remove the acid burn scars.</td></tr>
+				</table>
+
+				</p>
+			</div>
+					
+			<div id="footer">Página 29</div>
+			
+			</div>
+			
+			<div class="hojavertical">
+		 
+			<div id="contenido3">
+				<p>
+
+				<h3><span style="color: #FBADF7;">PSYCHIC INJURY</span></h3>
+				<table class="Injurytable">
+					<tr><th id="injuryth" style="background-color: #FBADF7;">Roll</th><th class="injuryth2" style="background-color: #FBADF7;text-align: center;"> Psychic Injury</th></tr>
+					<tr><td id="injuryth" style="background-color: #FBADF7;"><b>1</b></td><td class="injuryth2"><b>Brain Injury.</b> You have suffered a brain injury. You have disadvantage on Intelligence, Wisdom, and Charisma checks, as well as Intelligence, Wisdom, and Charisma saving throws. If you fail a saving throw against <img src="hammer.png"> damage, force damage, or psychic damage, you are also stunned until the end of your next turn. Magic such as the regenerate spell can restore your full brain function.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FBADF7;"><b>2</b></td><td class="injuryth2"><b>Indefinite Madness.</b> Roll on the Indefinite Madness table in the Dungeon Masters Guide.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FBADF7;"><b>3</b></td><td class="injuryth2"><b>Severe headaches.</b> You have disadvantage on Wisdom checks and Wisdom saving throws. If you fail a saving throw against <img src="hammer.png"> damage, force damage, or psychic damage, you are also stunned until the end of your next turn. Magic such as the regenerate spell can cure your severe headaches.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FBADF7;"><b>4</b></td><td class="injuryth2"><b>Phobia.</b> You develop a debilitating fear of something in the situation from which you gained your injury. For example, if you were damaged by a mind flayer, you might have a fear of octopuses. The DM will decide. When you are confronted with your phobia, you have disadvantage on all ability checks and saving throws. Magic such as the regenerate spell can cure your phobia.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FBADF7;"><b>5-7</b></td><td class="injuryth2"><b>Long-term Madness.</b> Roll on the Long-term Madness table in the Dungeon Masters Guide. Your madness lasts twice as long.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FBADF7;"><b>8-10</b></td><td class="injuryth2"><b>Short-term Madness.</b> Roll on the Short-term Madness table in the Dungeon Masters Guide. Your madness lasts twice as long.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FBADF7;"><b>11-13</b></td><td class="injuryth2"><b>Weak Persona.</b> You have suffered damage to your sense of self. You have disadvantage on Charisma checks. Magic such as the regenerate spell can heal your weak persona. Alternatively, it will heal on its own in a week.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FBADF7;"><b>14-16</b></td><td class="injuryth2"><b>Minor headaches.</b> You have disadvantage on Wisdom checks. Magical healing cures your minor headaches. Alternatively, they will resolve on their own in a week.</td></tr>
+					<tr><td id="injuryth" style="background-color: #FBADF7;"><b>17-20</b></td><td class="injuryth2"><b>Inappropriate Volume.</b> You can’t regulate your volume. You shout when you intend to whisper, and whisper when you intend to shout. Magical healing cures your inappropriate volume.</td></tr>
+				</table>
+				
+				<h3><span style="color: #00F8F8;">FORCE INJURY</span></h3>
+				<table class="Injurytable">
+					<tr><th id="injuryth" style="background-color: #00F8F8;">Roll</th><th class="injuryth2" style="background-color: #00F8F8;text-align: center;"> Force Injury</th></tr>
+					<tr><td id="injuryth" style="background-color: #00F8F8;"><b>1</b></td><td class="injuryth2"><b>Brain Injury.</b> You have suffered a brain injury. Your mind exists in two planes of reality, one real and one borne of raw magic. You constantly shift between the two, seeing or hearing things that may not exist. You have disadvantage on Intelligence, Wisdom, and Charisma checks, as well as Intelligence, Wisdom, and Charisma saving throws. If you fail a saving throw against <img src="hammer.png"> damage, force damage, or psychic damage, you are also stunned until the end of your next turn. Magic such as the regenerate spell can restore your full brain functions.</td></tr>
+					<tr><td id="injuryth" style="background-color: #00F8F8;"><b>2</b></td><td class="injuryth2"><b>Neuroregressive ataxia.</b> Your limbs lose their sensation to temperature, pain, vibration and touch. Your muscles feel weakened and you have difficulty holding items. You suffer disadvantage to all Strength and Dexterity ability checks and saving throws. You also experience occasional loss of control over your limbs and make sudden and short subconscious actions (such as attempting to unsheathe your weapon or write words on a nearby piece of paper, etc). Magic such as the regenerate spell can restore your coordination.</td></tr>
+					<tr><td id="injuryth" style="background-color: #00F8F8;"><b>3</b></td><td class="injuryth2"><b>Neurodegenerative disorder.</b> Your hands are jittery and coordination is impeded by frequent muscle jolts that make you grab or squeeze hard on whatever you are holding. You suffer disadvantage to all Dexterity checks to manipulate items and you must make Dexterity saving throws against breaking fragile items you are holding. Magic such as the regenerate spell can restore your coordination.</td></tr>
+					<tr><td id="injuryth" style="background-color: #00F8F8;"><b>4</b></td><td class="injuryth2"><b>Sleep Disruption.</b> You suffer from severe parasomnia and you are unable to force yourself to sleep unless you have at least one level of Exhaustion. When you sleep you suffer from terrifying nightmares and sleep paralysis. You have disadvantage on Wisdom checks and Wisdom saving throws. If you fail a saving throw against <img src="hammer.png"> damage, force damage, or psychic damage, you are also stunned until the end of your next turn. Magic such as the regenerate spell can cure your condition.</td></tr>
+					<tr><td id="injuryth" style="background-color: #00F8F8;"><b>5-7</b></td><td class="injuryth2"><b>Internal Injury.</b> You suffer occasional phantom sensations of something touching an internal organ or moving inside you causing you discomfort. Whenever you attempt an action in combat, you must make a DC 15 Constitution saving throw. On a failed save, you lose your action and can't use reactions until the start of your next turn. Magical healing of 6th level or higher, such as heal or regenerate, cures the internal injury, or if you spend a week doing nothing but resting, it heals on its own.</td></tr>
+					<tr><td id="injuryth" style="background-color: #00F8F8;"><b>8-10</b></td><td class="injuryth2"><b>Major Concussion.</b> You have disadvantage on Intelligence checks, Wisdom checks, and Charisma checks, as well as Constitution saving throws to maintain concentration. You suffer regular vertigo, lose smell and taste sensitivity and suffer from colour blindness. Magical healing of 6th level or higher, such as heal or regenerate, cures the concussion. Alternatively, it heals on its own in a week.</td></tr>
+					<tr><td id="injuryth" style="background-color: #00F8F8;"><b>11-13</b></td><td class="injuryth2"><b>Minor Concussion.</b> You have disadvantage on Intelligence checks. You suffer occasional vertigo and lose smell and taste sensitivity. The concussion heals if you receive any magical healing; alternatively it heals on its own in three days. If you already have a minor concussion, you suffer a major concussion.</td></tr>
+					<tr><td id="injuryth" style="background-color: #00F8F8;"><b>14-16</b></td><td class="injuryth2"><b>Severe Bruising.</b> You suffer severe bruising over an extensive portion of your anatomy and lose tactile sensitivity over the area. Anytime you suffer <img src="hammer.png"> or force damage, you suffer an additional point of <img src="hammer.png"> or force damage. The bruising heals if you receive magical healing. Alternatively, it heals on its own in three days.</td></tr>
+					<tr><td id="injuryth" style="background-color: #00F8F8;"><b>17-20</b></td><td class="injuryth2"><b>Phantom Pain.</b> Part of your body feels numb as if blood flow has stopped and feels phantom pain but doesn't have any adverse effect. Any magical healing relieves your pain, although sensation may linger until the end of your next long rest.</td></tr>
+				</table>
+				
+				</p>
+			</div>
+					
+			<div id="footer">Página 30</div>
+			
+			</div>
+			
+		</body>
+</html>
